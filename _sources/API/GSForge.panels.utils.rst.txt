@@ -1,0 +1,7 @@
+GSForge.panels.utils module
+===========================
+
+.. automodule:: GSForge.panels.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

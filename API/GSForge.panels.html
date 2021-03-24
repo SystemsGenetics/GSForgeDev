@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GSForge.panels package &mdash; gsforge v0.5beta2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GSForge.panels.utils module" href="GSForge.panels.utils.html" />
+    <link rel="prev" title="GSForge.operations.prospectors module" href="GSForge.operations.prospectors.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/ref_examples_index.html">Reference Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/walkthrough_index.html">Walkthroughs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GSForge.html">GSForge package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="GSForge.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="GSForge.models.html">GSForge.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.operations.html">GSForge.operations package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">GSForge.panels package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.plots.html">GSForge.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.utils.html">GSForge.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GSForge.html#module-GSForge">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">GSForge</a> &raquo;</li>
+        
+          <li><a href="GSForge.html">GSForge package</a> &raquo;</li>
+        
+      <li>GSForge.panels package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/API/GSForge.panels.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gsforge-panels-package">
+<h1>GSForge.panels package<a class="headerlink" href="#gsforge-panels-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GSForge.panels.utils.html">GSForge.panels.utils module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-GSForge.panels">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-GSForge.panels" title="Permalink to this headline">¶</a></h2>
+<p>GSForge Panel applications provide interactive visualizations for <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code>
+or <code class="docutils literal notranslate"><span class="pre">GeneSetCollection</span></code> objects.</p>
+<dl class="py class">
+<dt id="GSForge.panels.UMAP_Interface">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">GSForge.panels.</span></code><code class="sig-name descname"><span class="pre">UMAP_Interface</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></p>
+<p>A UMAP Panel Exploration Tool.</p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">annotation_categories</span></code> = param.Dict(readonly=False)</dt><dd><p>Categories of variables. Controls which values are selectable as a ‘hue’.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">n_neighbors</span></code> = param.Integer(readonly=False)</dt><dd><p>The size of local neighborhood (in terms of number of neighboring sample points) used 
+        for manifold approximation. Larger values result in more global views of the manifold, 
+        while smaller values result in more local data being preserved. In general values 
+        should be in the range 2 to 100.
+  
+        <em>This parameter is limited by the number of samples in a given dataset.</em></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">n_components</span></code> = param.Integer(readonly=False)</dt><dd><p>The number of components (dimensions) to reduce to. Maybe one day we will go 3D.
+        For now this should not be changed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">min_dist</span></code> = param.Number(readonly=False)</dt><dd><p>The effective minimum distance between embedded points. Smaller values will 
+        result in a more clustered/clumped embedding where nearby points on the manifold 
+        are drawn closer together, while larger values will result on a more even dispersal
+        of points. The value should be set relative to the spread value, which determines 
+        the scale at which embedded points will be spread out.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">metric</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>The metric to use to compute distances in high dimensional space.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">random_state</span></code> = param.Integer(readonly=False)</dt><dd><p>Random state seed. Set for (exactly) reproducible plots.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">hue</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>Select the column by which the points drawn should be colored by.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">apply_default_opts</span></code> = param.Boolean(readonly=False)</dt><dd><p>Whether to apply the default styling based on the current backend.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">plot_options</span></code> = param.Parameter(readonly=False)</dt><dd><p>User supplied options to the plotting functions. If provided (and is not None), these will take
+    precedence over a functions built-in defaults.</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">datashade</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynspread</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">datashade_kwargs</span></code> = param.Dict(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">update</span></code> = param.Action(readonly=False)</p>
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.annotation_categories">
+<code class="sig-name descname"><span class="pre">annotation_categories</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.annotation_categories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.n_neighbors">
+<code class="sig-name descname"><span class="pre">n_neighbors</span></code><em class="property"> <span class="pre">=</span> <span class="pre">15</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.n_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.n_components">
+<code class="sig-name descname"><span class="pre">n_components</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.n_components" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.min_dist">
+<code class="sig-name descname"><span class="pre">min_dist</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0.1</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.min_dist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.metric">
+<code class="sig-name descname"><span class="pre">metric</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'manhattan'</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.metric" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.random_state">
+<code class="sig-name descname"><span class="pre">random_state</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.random_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.hue">
+<code class="sig-name descname"><span class="pre">hue</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.hue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.apply_default_opts">
+<code class="sig-name descname"><span class="pre">apply_default_opts</span></code><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.apply_default_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.plot_options">
+<code class="sig-name descname"><span class="pre">plot_options</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.plot_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.datashade">
+<code class="sig-name descname"><span class="pre">datashade</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.datashade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.dynspread">
+<code class="sig-name descname"><span class="pre">dynspread</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.dynspread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.datashade_kwargs">
+<code class="sig-name descname"><span class="pre">datashade_kwargs</span></code><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.datashade_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.update">
+<code class="sig-name descname"><span class="pre">update</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">bokeh_opts</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">matplotlib_opts</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.get_transform_kwargs">
+<code class="sig-name descname"><span class="pre">get_transform_kwargs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">transform=&lt;class</span> <span class="pre">'umap.umap_.UMAP'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.get_transform_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the overlapping arguments of the transform and parameters of this panel class,
+and returns them as a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.static_transform">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">static_transform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.static_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the transform with the selected panel parameters on the given array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.transform">
+<code class="sig-name descname"><span class="pre">transform</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the transform with the selected panel parameters and data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.cached_transform">
+<code class="sig-name descname"><span class="pre">cached_transform</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;methodtools._LruCacheWire</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.cached_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.build_embedding_data_frame">
+<code class="sig-name descname"><span class="pre">build_embedding_data_frame</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.build_embedding_data_frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.build_plot">
+<code class="sig-name descname"><span class="pre">build_plot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.build_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.datashaded_view">
+<code class="sig-name descname"><span class="pre">datashaded_view</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.datashaded_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.view">
+<code class="sig-name descname"><span class="pre">view</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.view" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <cite>holoviews.Points</cite> plot of the selected transform.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="GSForge.panels.UMAP_Interface.panel">
+<code class="sig-name descname"><span class="pre">panel</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.panels.UMAP_Interface.panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interactive panel application for transform exploration.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="GSForge.panels.UMAP_Interface.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'UMAP_Interface'</span></em><a class="headerlink" href="#GSForge.panels.UMAP_Interface.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GSForge.panels.utils.html" class="btn btn-neutral float-right" title="GSForge.panels.utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GSForge.operations.prospectors.html" class="btn btn-neutral float-left" title="GSForge.operations.prospectors module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

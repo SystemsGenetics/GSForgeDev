@@ -1,0 +1,10 @@
+GSForge.plots.collections package
+=================================
+
+Module contents
+---------------
+
+.. automodule:: GSForge.plots.collections
+   :members:
+   :undoc-members:
+   :show-inheritance:

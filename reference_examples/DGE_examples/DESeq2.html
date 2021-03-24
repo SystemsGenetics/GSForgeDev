@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating DESeq2 GeneSets &mdash; gsforge v0.5beta2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating sleuth GeneSets" href="sleuth.html" />
+    <link rel="prev" title="Differential Gene Expression Examples" href="dge_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_guide/user_guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ref_examples_index.html">Reference Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../plot_gallery/ref_plots.html">Reference Plots</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="dge_index.html">Differential Expression Examples</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating DESeq2 GeneSets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prepare-input-data-for-deseq2">Prepare input data for DESeq2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-deseq2">Run <code class="docutils literal notranslate"><span class="pre">DESeq2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sleuth.html">Creating <code class="docutils literal notranslate"><span class="pre">sleuth</span></code> GeneSets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Normalizations/norm_index.html">Normalization Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../walkthroughs/walkthrough_index.html">Walkthroughs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../API/modules.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../ref_examples_index.html">Reference Examples</a> &raquo;</li>
+        
+          <li><a href="dge_index.html">Differential Gene Expression Examples</a> &raquo;</li>
+        
+      <li>Creating DESeq2 GeneSets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference_examples/DGE_examples/DESeq2.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-deseq2-genesets">
+<h1>Creating DESeq2 GeneSets<a class="headerlink" href="#creating-deseq2-genesets" title="Permalink to this headline">¶</a></h1>
+<p>This notebook covers how to run and load a basic <code class="docutils literal notranslate"><span class="pre">DESeq2</span></code> DEG result as a <code class="docutils literal notranslate"><span class="pre">GSForge.GeneSet</span></code>.</p>
+<p><em><strong>Import Python packages</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">fspath</span><span class="p">,</span> <span class="n">environ</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">GSForge</span> <span class="k">as</span> <span class="nn">gsf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>R integration setup</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rpy2.rinterface_lib.callbacks</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">rpy2.robjects</span> <span class="kn">import</span> <span class="n">pandas2ri</span>
+<span class="o">%</span><span class="k">load_ext</span> rpy2.ipython
+<span class="n">pandas2ri</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="n">rpy2</span><span class="o">.</span><span class="n">rinterface_lib</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="n">a5e31802d18</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rpy2.rinterface_lib.callbacks</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">logging</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rpy2.robjects</span> <span class="kn">import</span> <span class="n">pandas2ri</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;load_ext&#39;</span><span class="p">,</span> <span class="s1">&#39;rpy2.ipython&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pandas2ri</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;rpy2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>Import R Packages</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+library(&quot;DESeq2&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">OSF_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSFORGE_DEMO_DATA&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;~/GSForge_demo_data/osfstorage&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+<span class="n">HYDRO_GEM_PATH</span> <span class="o">=</span> <span class="n">OSF_PATH</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;AnnotatedGEMs&quot;</span><span class="p">,</span> <span class="s2">&quot;oryza_sativa_hydro_raw.nc&quot;</span><span class="p">)</span>
+<span class="n">DEG_COLL_PATH</span> <span class="o">=</span> <span class="n">OSF_PATH</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;Collections&quot;</span><span class="p">,</span> <span class="s2">&quot;DEG_gene_sets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em><strong>Loading an AnnotatedGEM</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agem</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">AnnotatedGEM</span><span class="p">(</span><span class="n">HYDRO_GEM_PATH</span><span class="p">)</span>
+<span class="n">agem</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="prepare-input-data-for-deseq2">
+<h2>Prepare input data for DESeq2<a class="headerlink" href="#prepare-input-data-for-deseq2" title="Permalink to this headline">¶</a></h2>
+<p>This requires us to drop genes that have counts of zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dropped_counts</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">get_gem_data</span><span class="p">(</span><span class="n">agem</span><span class="p">,</span> <span class="n">count_mask</span><span class="o">=</span><span class="s2">&quot;dropped&quot;</span><span class="p">,</span> <span class="n">annotation_variables</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;treatment&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These counts were made with Kallisto, so we must round them for use in <code class="docutils literal notranslate"><span class="pre">DEseq2</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dropped_counts</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Round counts to intergers</em></p>
+<p>Since our example GEM was aligned with Kallisto, which can give non-integer counts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ri_dropped_counts</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">R_interface</span><span class="o">.</span><span class="n">Py_counts_to_R</span><span class="p">(</span><span class="n">dropped_counts</span><span class="p">)</span>
+<span class="n">ri_dropped_counts</span> <span class="o">=</span> <span class="n">ri_dropped_counts</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
+<span class="n">ri_labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ri_dropped_counts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ri_labels</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="run-deseq2">
+<h2>Run <code class="docutils literal notranslate"><span class="pre">DESeq2</span></code><a class="headerlink" href="#run-deseq2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span> -i ri_dropped_counts -i ri_labels -o deseq_df
+
+dds &lt;- DESeqDataSetFromMatrix(countData = ri_dropped_counts,
+                              colData = ri_labels,
+                              design= ~ treatment)
+dds &lt;- DESeq(dds)
+deseq_results &lt;- results(dds)
+deseq_df = data.frame(deseq_results)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can examine the <span class="math notranslate nohighlight">\(\beta\)</span> matrix produced by <code class="docutils literal notranslate"><span class="pre">DESeq2</span></code> directly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">R</span>
+
+resultsNames(dds)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deseq_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And save the entire dataset as a <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deseq2_treatment</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">GeneSet</span><span class="p">(</span><span class="n">deseq_df</span><span class="p">,</span> 
+                               <span class="n">name</span><span class="o">=</span><span class="s2">&quot;deseq2_treatment&quot;</span><span class="p">,</span> 
+                               <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;DESeq2_formula&quot;</span><span class="p">:</span> <span class="s2">&quot;~ Treatment&quot;</span><span class="p">})</span>
+<span class="n">deseq2_treatment</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deseq2_treatment</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This lets us keep all the data produced by the analysis, while setting the <code class="docutils literal notranslate"><span class="pre">support</span></code> to whatever we deem this method selected.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">top_n_abs</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">padj_cuttoff</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the top n most (absolutely) differentially expressed genes from a deseq2 result.</span>
+<span class="sd">    This also filters by p-values.&quot;&quot;&quot;</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;padj&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">padj_cuttoff</span><span class="p">]</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;log2FoldChange&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_n_abs</span><span class="p">(</span><span class="n">deseq_df</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deseq2_treatment</span> <span class="o">=</span> <span class="n">deseq2_treatment</span><span class="o">.</span><span class="n">set_support_by_genes</span><span class="p">(</span><span class="n">top_n_abs</span><span class="p">(</span><span class="n">deseq_df</span><span class="p">))</span>
+<span class="n">deseq2_treatment</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deseq2_treatment</span><span class="o">.</span><span class="n">save_as_netcdf</span><span class="p">(</span><span class="n">DEG_COLL_PATH</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sleuth.html" class="btn btn-neutral float-right" title="Creating sleuth GeneSets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dge_index.html" class="btn btn-neutral float-left" title="Differential Gene Expression Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

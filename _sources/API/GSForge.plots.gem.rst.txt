@@ -1,0 +1,10 @@
+GSForge.plots.gem package
+=========================
+
+Module contents
+---------------
+
+.. automodule:: GSForge.plots.gem
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+GSForge.panels package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   GSForge.panels.utils
+
+Module contents
+---------------
+
+.. automodule:: GSForge.panels
+   :members:
+   :undoc-members:
+   :show-inheritance:

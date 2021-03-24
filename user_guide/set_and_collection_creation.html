@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating Feature Sets and Collections &mdash; gsforge v0.5beta2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interface Guide" href="Interface_Guide.html" />
+    <link rel="prev" title="Creating an Annotated Expression Matrix" href="gem_creation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="user_guide.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tour.html">Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gem_creation.html">Annotated Expression Matrix Creation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Set and Collection Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-genesets">Creating GeneSets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#genesets-from-lists-or-arrays">GeneSets from Lists or Arrays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-pandas-dataframes-or-xarray-dataset-objects">From <code class="docutils literal notranslate"><span class="pre">pandas.DataFrames</span></code> or <code class="docutils literal notranslate"><span class="pre">xarray.DataSet</span></code> objects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-genesetcollections">Creating GeneSetCollections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Interface_Guide.html">Interface Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Plotting_Guide.html">Plotting Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="R_integration.html">R Integration Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_resources.html">Analysis Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/ref_examples_index.html">Reference Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/walkthrough_index.html">Walkthroughs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API/modules.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="user_guide.html">User Guide</a> &raquo;</li>
+        
+      <li>Creating Feature Sets and Collections</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/user_guide/set_and_collection_creation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p><em><strong>Notebook setup</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">GSForge</span> <span class="k">as</span> <span class="nn">gsf</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-feature-sets-and-collections">
+<h1>Creating Feature Sets and Collections<a class="headerlink" href="#creating-feature-sets-and-collections" title="Permalink to this headline">¶</a></h1>
+<p>In this example we have an annotated GEM already constructed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">OSF_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSFORGE_DEMO_DATA&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;~/GSForge_demo_data/osfstorage&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+<span class="n">GEM_PATH</span> <span class="o">=</span> <span class="n">OSF_PATH</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s2">&quot;AnnotatedGEMs&quot;</span><span class="p">,</span> <span class="s2">&quot;oryza_sativa_hydro_raw.nc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agem</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">AnnotatedGEM</span><span class="p">(</span><span class="n">GEM_PATH</span><span class="p">)</span>
+<span class="n">agem</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">_acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">199</span>                 <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_key</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/lru_cache.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">53</span>             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;/home/travis/GSForge_demo_data/AnnotatedGEMs/oryza_sativa_hydro_raw.nc&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False))]
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">72</span><span class="n">f328c39156</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">agem</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">AnnotatedGEM</span><span class="p">(</span><span class="n">GEM_PATH</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">agem</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_AnnotatedGEM.py</span> in <span class="ni">__init__</span><span class="nt">(self, *args, **params)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Initializing a new gsforge.AnnotatedGEM object...&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span>         <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">68</span>             <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__annotated_gem_dispatch</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span>         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;AnnotatedGEM initialization complete.&#39;</span><span class="p">)</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/_singledispatchmethod.py</span> in <span class="ni">_method</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>         <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>             <span class="n">method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>             <span class="k">return</span> <span class="n">method</span><span class="o">.</span><span class="fm">__get__</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span> 
+<span class="g g-Whitespace">     </span><span class="mi">75</span>         <span class="n">_method</span><span class="o">.</span><span class="n">__isabstractmethod__</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__isabstractmethod__</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_AnnotatedGEM.py</span> in <span class="ni">_parse_netcdf_path</span><span class="nt">(cls, netcdf_path, **params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span>             <span class="n">A</span> <span class="n">parsed</span> <span class="n">parameter</span> <span class="n">dictionary</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>         <span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">178</span><span class="sd">         params = cls._parse_xarray_dataset(xr.open_dataset(netcdf_path), **params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd">         return {&quot;data&quot;: xr.open_dataset(netcdf_path), **params}</span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span><span class="sd"> </span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, group, decode_cf, mask_and_scale, decode_times, concat_characters, decode_coords, engine, chunks, lock, cache, drop_variables, backend_kwargs, use_cftime, decode_timedelta)</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">553</span><span class="sd">         opener = _get_backend_cls(engine)</span>
+<span class="ne">--&gt; </span><span class="mi">554</span><span class="sd">         store = opener(filename_or_obj, **extra_kwargs, **backend_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span><span class="sd">     with close_on_error(store):</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">open</span><span class="nt">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">376</span><span class="sd">             netCDF4.Dataset, filename, mode=mode, kwargs=kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">377</span><span class="sd">         )</span>
+<span class="ne">--&gt; </span><span class="mi">378</span><span class="sd">         return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">379</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span><span class="sd">     def _acquire(self, needs_lock=True):</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">__init__</span><span class="nt">(self, manager, group, mode, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span><span class="sd">         self._group = group</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span><span class="sd">         self._mode = mode</span>
+<span class="ne">--&gt; </span><span class="mi">326</span><span class="sd">         self.format = self.ds.data_model</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span><span class="sd">         self._filename = self.ds.filepath()</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span><span class="sd">         self.is_remote = is_remote_uri(self._filename)</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">ds</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="sd">     @property</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span><span class="sd">     def ds(self):</span>
+<span class="ne">--&gt; </span><span class="mi">387</span><span class="sd">         return self._acquire()</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span><span class="sd">     def open_store_variable(self, name, var):</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ni">_acquire</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">379</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span><span class="sd">     def _acquire(self, needs_lock=True):</span>
+<span class="ne">--&gt; </span><span class="mi">381</span><span class="sd">         with self._manager.acquire_context(needs_lock) as root:</span>
+<span class="g g-Whitespace">    </span><span class="mi">382</span><span class="sd">             ds = _nc4_require_group(root, self._group, self._mode)</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span><span class="sd">         return ds</span>
+
+<span class="nn">/opt/python/3.7.1/lib/python3.7/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="sd">         del self.args, self.kwds, self.func</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="sd">         try:</span>
+<span class="ne">--&gt; </span><span class="mi">112</span><span class="sd">             return next(self.gen)</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="sd">         except StopIteration:</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span><span class="sd">             raise RuntimeError(&quot;generator didn&#39;t yield&quot;) from None</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">acquire_context</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span><span class="sd">     def acquire_context(self, needs_lock=True):</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span><span class="sd">         &quot;&quot;&quot;</span><span class="n">Context</span> <span class="n">manager</span> <span class="k">for</span> <span class="n">acquiring</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">187</span><span class="s2">         file, cached = self._acquire_with_cache_info(needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="s2">         try:</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="s2">             yield file</span>
+
+<span class="nn">~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/file_manager.py</span> in <span class="ni">_acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span><span class="s2">                     kwargs = kwargs.copy()</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span><span class="s2">                     kwargs[&quot;mode&quot;] = self._mode</span>
+<span class="ne">--&gt; </span><span class="mi">205</span><span class="s2">                 file = self._opener(*self._args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="s2">                 if self._mode == &quot;w&quot;:</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span><span class="s2">                     # ensure file doesn&#39;t get overriden when opened again</span>
+
+<span class="nn">src/netCDF4/_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4.Dataset.__init__</span><span class="nt">()</span>
+
+<span class="nn">src/netCDF4/_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: b&#39;/home/travis/GSForge_demo_data/AnnotatedGEMs/oryza_sativa_hydro_raw.nc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-genesets">
+<h2>Creating GeneSets<a class="headerlink" href="#creating-genesets" title="Permalink to this headline">¶</a></h2>
+<p>For tool-specific examples please see the <a class="reference internal" href="../reference_examples/ref_examples_index.html"><span class="doc std std-doc">reference examples</span></a>.</p>
+<p>See the API reference of <a class="reference internal" href="../API/GSForge.models.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">GSForge.GeneSet</span></code></span></a> for all availble creation functions, which include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from_pandas</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_GeneSets</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_bool_array</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_gene_array</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_xarray_dataset</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_netcdf</span></code></p></li>
+</ul>
+<div class="section" id="genesets-from-lists-or-arrays">
+<h3>GeneSets from Lists or Arrays<a class="headerlink" href="#genesets-from-lists-or-arrays" title="Permalink to this headline">¶</a></h3>
+<p>A minimal GeneSet is just that: a set of genes.</p>
+<p>Here we draw random features to demonstrate this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random_features</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">agem</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Gene</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">random_features</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Provide this to the <code class="docutils literal notranslate"><span class="pre">from_gene_array()</span></code> constructor to create a simple GeneSet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">set_example</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">GeneSet</span><span class="o">.</span><span class="n">from_gene_array</span><span class="p">(</span><span class="n">random_features</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Random Set&#39;</span><span class="p">)</span>
+<span class="n">set_example</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="from-pandas-dataframes-or-xarray-dataset-objects">
+<h3>From <code class="docutils literal notranslate"><span class="pre">pandas.DataFrames</span></code> or <code class="docutils literal notranslate"><span class="pre">xarray.DataSet</span></code> objects<a class="headerlink" href="#from-pandas-dataframes-or-xarray-dataset-objects" title="Permalink to this headline">¶</a></h3>
+<p>Commonly there is some information associated with a set of features.
+Differential gene expression results often contain information about many (or all) of the genes, but only identify a few as ‘differentially expressed’.
+We can store all such information in the <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code> object, and indicate which genes are selected by setting a boolean array named <code class="docutils literal notranslate"><span class="pre">support</span></code>.</p>
+<p>Here we simulate an example <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">random_features</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">agem</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Gene</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;sim_LFC&#39;</span><span class="p">:</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">),</span>
+        <span class="s1">&#39;sim_pvalue&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)),</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">random_features</span>
+<span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;support&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sim_pvalue&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sim_LFC&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create the <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code> using the <code class="docutils literal notranslate"><span class="pre">from_pandas()</span></code> constructor.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gs</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">GeneSet</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sim DGE&#39;</span><span class="p">)</span>
+<span class="n">dge_gs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dge_gs</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-genesetcollections">
+<h2>Creating GeneSetCollections<a class="headerlink" href="#creating-genesetcollections" title="Permalink to this headline">¶</a></h2>
+<p>We only need to provided an AnnotatedGEM and a name to create a <code class="docutils literal notranslate"><span class="pre">GeneSetCollection</span></code>.
+Then add <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code> objects like you would entries to a dictionary:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_coll</span> <span class="o">=</span> <span class="n">gsf</span><span class="o">.</span><span class="n">GeneSetCollection</span><span class="p">(</span><span class="n">gem</span><span class="o">=</span><span class="n">agem</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Literature DGE&#39;</span><span class="p">)</span>
+<span class="n">sample_coll</span><span class="p">[</span><span class="s1">&#39;set example&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dge_gs</span>
+<span class="n">sample_coll</span><span class="p">[</span><span class="s1">&#39;simulated DGE example&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">set_example</span>
+<span class="n">sample_coll</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To see what you can do with a <code class="docutils literal notranslate"><span class="pre">GeneSetCollection</span></code> see:</p>
+<ul class="simple">
+<li><p>the Interface Guide</p></li>
+<li><p>plotting examples</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Interface_Guide.html" class="btn btn-neutral float-right" title="Interface Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="gem_creation.html" class="btn btn-neutral float-left" title="Creating an Annotated Expression Matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

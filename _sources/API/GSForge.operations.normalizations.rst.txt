@@ -1,0 +1,7 @@
+GSForge.operations.normalizations module
+========================================
+
+.. automodule:: GSForge.operations.normalizations
+   :members:
+   :undoc-members:
+   :show-inheritance:

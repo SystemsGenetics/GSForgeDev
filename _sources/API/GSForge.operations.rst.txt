@@ -1,0 +1,21 @@
+GSForge.operations package
+==========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   GSForge.operations.analytics
+   GSForge.operations.core
+   GSForge.operations.normalizations
+   GSForge.operations.prospectors
+
+Module contents
+---------------
+
+.. automodule:: GSForge.operations
+   :members:
+   :undoc-members:
+   :show-inheritance:

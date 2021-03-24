@@ -1,0 +1,7 @@
+GSForge.operations.core module
+==============================
+
+.. automodule:: GSForge.operations.core
+   :members:
+   :undoc-members:
+   :show-inheritance:

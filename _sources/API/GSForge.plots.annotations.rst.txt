@@ -1,0 +1,10 @@
+GSForge.plots.annotations package
+=================================
+
+Module contents
+---------------
+
+.. automodule:: GSForge.plots.annotations
+   :members:
+   :undoc-members:
+   :show-inheritance:
