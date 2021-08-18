@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/python/3.7.1/lib/python3.7/asyncio/base_events.py", line 573, in run_until_complete
+    return future.result()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 559, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+deg_gs = deg_gsc.gene_sets["'0 + treatment:genotype'__treatment[HEAT]"]
+deg_gs
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m/tmp/ipykernel_5816/2103114488.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdeg_gs[0m [0;34m=[0m [0mdeg_gsc[0m[0;34m.[0m[0mgene_sets[0m[0;34m[[0m[0;34m"'0 + treatment:genotype'__treatment[HEAT]"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mdeg_gs[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_GeneSetCollection.py[0m in [0;36m__getitem__[0;34m(self, item)[0m
+[1;32m     53[0m [0;34m[0m[0m
+[1;32m     54[0m     [0;32mdef[0m [0m__getitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mitem[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 55[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mdata[0m[0;34m[[0m[0mitem[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     56[0m [0;34m[0m[0m
+[1;32m     57[0m     [0;32mdef[0m [0m__setitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m,[0m [0mgene_set[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mKeyError[0m: "'0 + treatment:genotype'__treatment[HEAT]"
+KeyError: "'0 + treatment:genotype'__treatment[HEAT]"
+

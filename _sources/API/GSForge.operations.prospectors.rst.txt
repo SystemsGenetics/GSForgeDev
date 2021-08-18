@@ -1,0 +1,7 @@
+GSForge.operations.prospectors module
+=====================================
+
+.. automodule:: GSForge.operations.prospectors
+   :members:
+   :undoc-members:
+   :show-inheritance:

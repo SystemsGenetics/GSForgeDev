@@ -1,0 +1,217 @@
+Traceback (most recent call last):
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/python/3.7.1/lib/python3.7/asyncio/base_events.py", line 573, in run_until_complete
+    return future.result()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 559, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+counts, _ = gsf.get_gem_data(gsc, selected_gene_sets=["Boruta_treatment"])
+selected_genes = counts.isel(Gene=np.argsort(counts.mean(dim="Sample").values)[-10:])["Gene"].values
+selected_genes
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mIndexError[0m                                Traceback (most recent call last)
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py[0m in [0;36m_getitem[0;34m(self, key)[0m
+[1;32m    103[0m                 [0moriginal_array[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mget_array[0m[0;34m([0m[0mneeds_lock[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 104[0;31m                 [0marray[0m [0;34m=[0m [0mgetitem[0m[0;34m([0m[0moriginal_array[0m[0;34m,[0m [0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    105[0m         [0;32mexcept[0m [0mIndexError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32msrc/netCDF4/_netCDF4.pyx[0m in [0;36mnetCDF4._netCDF4.Variable.__getitem__[0;34m()[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/netCDF4/utils.py[0m in [0;36m_out_array_shape[0;34m(count)[0m
+[1;32m    457[0m         [0;32mif[0m [0mn[0m [0;34m==[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 458[0;31m             [0mc[0m [0;34m=[0m [0mcount[0m[0;34m[[0m[0;34m...[0m[0;34m,[0m [0mi[0m[0;34m][0m[0;34m.[0m[0mravel[0m[0;34m([0m[0;34m)[0m[0;34m[[0m[0;36m0[0m[0;34m][0m [0;31m# All elements should be identical.[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    459[0m             [0mout[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0mc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mIndexError[0m: index 0 is out of bounds for axis 0 with size 0
+
+During handling of the above exception, another exception occurred:
+
+[0;31mIndexError[0m                                Traceback (most recent call last)
+[0;32m/tmp/ipykernel_5592/2252436617.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mcounts[0m[0;34m,[0m [0m_[0m [0;34m=[0m [0mgsf[0m[0;34m.[0m[0mget_gem_data[0m[0;34m([0m[0mgsc[0m[0;34m,[0m [0mselected_gene_sets[0m[0;34m=[0m[0;34m[[0m[0;34m"Boruta_treatment"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mselected_genes[0m [0;34m=[0m [0mcounts[0m[0;34m.[0m[0misel[0m[0;34m([0m[0mGene[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0margsort[0m[0;34m([0m[0mcounts[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0mdim[0m[0;34m=[0m[0;34m"Sample"[0m[0;34m)[0m[0;34m.[0m[0mvalues[0m[0;34m)[0m[0;34m[[0m[0;34m-[0m[0;36m10[0m[0;34m:[0m[0;34m][0m[0;34m)[0m[0;34m[[0m[0;34m"Gene"[0m[0;34m][0m[0;34m.[0m[0mvalues[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0mselected_genes[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/utils/__init__.py[0m in [0;36mcall[0;34m(*args, **kwargs)[0m
+[1;32m     34[0m [0;34m[0m[0m
+[1;32m     35[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 36[0;31m             [0mresult[0m [0;34m=[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     37[0m         [0;32mreturn[0m [0mresult[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     38[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36m__new__[0;34m(cls, *args, **params)[0m
+[1;32m    407[0m                 [0mparams[0m[0;34m[[0m[0;34m"selected_gene_sets"[0m[0;34m][0m [0;34m=[0m [0;34m[[0m[0mparams[0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m"selected_gene_sets"[0m[0;34m)[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    408[0m         [0minst[0m [0;34m=[0m [0mcls[0m[0;34m.[0m[0minstance[0m[0;34m([0m[0;34m**[0m[0mparams[0m[0;34m)[0m  [0;31m# See the param code for more on this `instance` function.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 409[0;31m         [0;32mreturn[0m [0minst[0m[0;34m.[0m[0m__call__[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    410[0m [0;34m[0m[0m
+[1;32m    411[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/operations/core.py[0m in [0;36m__call__[0;34m(self)[0m
+[1;32m     42[0m [0;34m[0m[0m
+[1;32m     43[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 44[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mget_gem_data[0m[0;34m([0m[0mself[0m[0;34m.[0m[0msingle_object[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0moutput_type[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36mget_gem_data[0;34m(self, single_object, output_type, **params)[0m
+[1;32m    390[0m                              f'types: {list(modes.keys())}')
+[1;32m    391[0m [0;34m[0m[0m
+[0;32m--> 392[0;31m         [0;32mreturn[0m [0mmodes[0m[0;34m[[0m[0mkey[0m[0;34m][0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    393[0m [0;34m[0m[0m
+[1;32m    394[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36mxarray_tuple[0;34m(self_)[0m
+[1;32m    351[0m         [0;32mdef[0m [0mxarray_tuple[0m[0;34m([0m[0mself_[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    352[0m             [0mlogger[0m[0;34m.[0m[0minfo[0m[0;34m([0m[0;34m'Returning counts as an xarray.DataArray and annotations as an xarray.Dataset.'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 353[0;31m             [0;32mreturn[0m [0mself_[0m[0;34m.[0m[0mx_count_data[0m[0;34m,[0m [0mself_[0m[0;34m.[0m[0my_annotation_data[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    354[0m [0;34m[0m[0m
+[1;32m    355[0m         [0;32mdef[0m [0mpandas_single[0m[0;34m([0m[0mself_[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36mx_count_data[0;34m(self)[0m
+[1;32m    286[0m [0;34m[0m[0m
+[1;32m    287[0m         [0mlogger[0m[0;34m.[0m[0minfo[0m[0;34m([0m[0;34mf'Preparing count data using mask mode {self.count_mask}.'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 288[0;31m         [0mcounts[0m [0;34m=[0m [0mmask_modes[0m[0;34m[[0m[0mself[0m[0;34m.[0m[0mcount_mask[0m[0;34m][0m[0;34m([0m[0mcounts[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    289[0m [0;34m[0m[0m
+[1;32m    290[0m         [0;31m# Optional transform.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36m<lambda>[0;34m(c)[0m
+[1;32m    241[0m [0;34m[0m[0m
+[1;32m    242[0m         mask_modes = {
+[0;32m--> 243[0;31m             [0;34m"complete"[0m[0;34m:[0m [0;32mlambda[0m [0mc[0m[0;34m:[0m [0mc[0m[0;34m.[0m[0mfillna[0m[0;34m([0m[0;36m0[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    244[0m             [0;34m"masked"[0m[0;34m:[0m [0;32mlambda[0m [0mc[0m[0;34m:[0m [0mc[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mc[0m [0;34m>[0m [0;36m0.0[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    245[0m             [0;34m"dropped"[0m[0;34m:[0m [0;32mlambda[0m [0mc[0m[0;34m:[0m [0mc[0m[0;34m.[0m[0mwhere[0m[0;34m([0m[0mc[0m [0;34m>[0m [0;36m0.0[0m[0;34m)[0m[0;34m.[0m[0mdropna[0m[0;34m([0m[0mdim[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mgem[0m[0;34m.[0m[0mgene_index_name[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/dataarray.py[0m in [0;36mfillna[0;34m(self, value)[0m
+[1;32m   2445[0m                 [0;34m"fillna on a DataArray"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2446[0m             )
+[0;32m-> 2447[0;31m         [0mout[0m [0;34m=[0m [0mops[0m[0;34m.[0m[0mfillna[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2448[0m         [0;32mreturn[0m [0mout[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2449[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/ops.py[0m in [0;36mfillna[0;34m(data, other, join, dataset_join)[0m
+[1;32m    151[0m         [0mdataset_join[0m[0;34m=[0m[0mdataset_join[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    152[0m         [0mdataset_fill_value[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0mnan[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 153[0;31m         [0mkeep_attrs[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    154[0m     )
+[1;32m    155[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/computation.py[0m in [0;36mapply_ufunc[0;34m(func, input_core_dims, output_core_dims, exclude_dims, vectorize, join, dataset_join, dataset_fill_value, keep_attrs, kwargs, dask, output_dtypes, output_sizes, meta, dask_gufunc_kwargs, *args)[0m
+[1;32m   1178[0m             [0mjoin[0m[0;34m=[0m[0mjoin[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1179[0m             [0mexclude_dims[0m[0;34m=[0m[0mexclude_dims[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1180[0;31m             [0mkeep_attrs[0m[0;34m=[0m[0mkeep_attrs[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1181[0m         )
+[1;32m   1182[0m     [0;31m# feed Variables directly through apply_variable_ufunc[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/computation.py[0m in [0;36mapply_dataarray_vfunc[0;34m(func, signature, join, exclude_dims, keep_attrs, *args)[0m
+[1;32m    291[0m [0;34m[0m[0m
+[1;32m    292[0m     [0mdata_vars[0m [0;34m=[0m [0;34m[[0m[0mgetattr[0m[0;34m([0m[0ma[0m[0;34m,[0m [0;34m"variable"[0m[0;34m,[0m [0ma[0m[0;34m)[0m [0;32mfor[0m [0ma[0m [0;32min[0m [0margs[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 293[0;31m     [0mresult_var[0m [0;34m=[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0mdata_vars[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    294[0m [0;34m[0m[0m
+[1;32m    295[0m     [0;32mif[0m [0msignature[0m[0;34m.[0m[0mnum_outputs[0m [0;34m>[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/computation.py[0m in [0;36mapply_variable_ufunc[0;34m(func, signature, exclude_dims, dask, output_dtypes, vectorize, keep_attrs, dask_gufunc_kwargs, *args)[0m
+[1;32m    650[0m         [0;32mif[0m [0misinstance[0m[0;34m([0m[0marg[0m[0;34m,[0m [0mVariable[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    651[0m         [0;32melse[0m [0marg[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 652[0;31m         [0;32mfor[0m [0marg[0m[0;34m,[0m [0mcore_dims[0m [0;32min[0m [0mzip[0m[0;34m([0m[0margs[0m[0;34m,[0m [0msignature[0m[0;34m.[0m[0minput_core_dims[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    653[0m     ]
+[1;32m    654[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/computation.py[0m in [0;36m<listcomp>[0;34m(.0)[0m
+[1;32m    650[0m         [0;32mif[0m [0misinstance[0m[0;34m([0m[0marg[0m[0;34m,[0m [0mVariable[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    651[0m         [0;32melse[0m [0marg[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 652[0;31m         [0;32mfor[0m [0marg[0m[0;34m,[0m [0mcore_dims[0m [0;32min[0m [0mzip[0m[0;34m([0m[0margs[0m[0;34m,[0m [0msignature[0m[0;34m.[0m[0minput_core_dims[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    653[0m     ]
+[1;32m    654[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/computation.py[0m in [0;36mbroadcast_compat_data[0;34m(variable, broadcast_dims, core_dims)[0m
+[1;32m    562[0m     [0mcore_dims[0m[0;34m:[0m [0mTuple[0m[0;34m[[0m[0mHashable[0m[0;34m,[0m [0;34m...[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    563[0m ) -> Any:
+[0;32m--> 564[0;31m     [0mdata[0m [0;34m=[0m [0mvariable[0m[0;34m.[0m[0mdata[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    565[0m [0;34m[0m[0m
+[1;32m    566[0m     [0mold_dims[0m [0;34m=[0m [0mvariable[0m[0;34m.[0m[0mdims[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/variable.py[0m in [0;36mdata[0;34m(self)[0m
+[1;32m    342[0m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_data[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    343[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 344[0;31m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mvalues[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    345[0m [0;34m[0m[0m
+[1;32m    346[0m     [0;34m@[0m[0mdata[0m[0;34m.[0m[0msetter[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/variable.py[0m in [0;36mvalues[0;34m(self)[0m
+[1;32m    515[0m     [0;32mdef[0m [0mvalues[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    516[0m         [0;34m"""The variable's data as a numpy.ndarray"""[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 517[0;31m         [0;32mreturn[0m [0m_as_array_or_item[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_data[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    518[0m [0;34m[0m[0m
+[1;32m    519[0m     [0;34m@[0m[0mvalues[0m[0;34m.[0m[0msetter[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/variable.py[0m in [0;36m_as_array_or_item[0;34m(data)[0m
+[1;32m    257[0m     [0mTODO[0m[0;34m:[0m [0mremove[0m [0mthis[0m [0;34m([0m[0mreplace[0m [0;32mwith[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m)[0m [0monce[0m [0mthese[0m [0missues[0m [0mare[0m [0mfixed[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    258[0m     """
+[0;32m--> 259[0;31m     [0mdata[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mdata[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    260[0m     [0;32mif[0m [0mdata[0m[0;34m.[0m[0mndim[0m [0;34m==[0m [0;36m0[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    261[0m         [0;32mif[0m [0mdata[0m[0;34m.[0m[0mdtype[0m[0;34m.[0m[0mkind[0m [0;34m==[0m [0;34m"M"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/indexing.py[0m in [0;36m__array__[0;34m(self, dtype)[0m
+[1;32m    546[0m [0;34m[0m[0m
+[1;32m    547[0m     [0;32mdef[0m [0m__array__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 548[0;31m         [0mself[0m[0;34m.[0m[0m_ensure_cached[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    549[0m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mself[0m[0;34m.[0m[0marray[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    550[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/indexing.py[0m in [0;36m_ensure_cached[0;34m(self)[0m
+[1;32m    543[0m     [0;32mdef[0m [0m_ensure_cached[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    544[0m         [0;32mif[0m [0;32mnot[0m [0misinstance[0m[0;34m([0m[0mself[0m[0;34m.[0m[0marray[0m[0;34m,[0m [0mNumpyIndexingAdapter[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 545[0;31m             [0mself[0m[0;34m.[0m[0marray[0m [0;34m=[0m [0mNumpyIndexingAdapter[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mself[0m[0;34m.[0m[0marray[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    546[0m [0;34m[0m[0m
+[1;32m    547[0m     [0;32mdef[0m [0m__array__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/indexing.py[0m in [0;36m__array__[0;34m(self, dtype)[0m
+[1;32m    516[0m [0;34m[0m[0m
+[1;32m    517[0m     [0;32mdef[0m [0m__array__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 518[0;31m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mself[0m[0;34m.[0m[0marray[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    519[0m [0;34m[0m[0m
+[1;32m    520[0m     [0;32mdef[0m [0m__getitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/indexing.py[0m in [0;36m__array__[0;34m(self, dtype)[0m
+[1;32m    417[0m     [0;32mdef[0m [0m__array__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    418[0m         [0marray[0m [0;34m=[0m [0mas_indexable[0m[0;34m([0m[0mself[0m[0;34m.[0m[0marray[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 419[0;31m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0marray[0m[0;34m[[0m[0mself[0m[0;34m.[0m[0mkey[0m[0;34m][0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    420[0m [0;34m[0m[0m
+[1;32m    421[0m     [0;32mdef[0m [0mtranspose[0m[0;34m([0m[0mself[0m[0;34m,[0m [0morder[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m     90[0m     [0;32mdef[0m [0m__getitem__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     91[0m         return indexing.explicit_indexing_adapter(
+[0;32m---> 92[0;31m             [0mkey[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mshape[0m[0;34m,[0m [0mindexing[0m[0;34m.[0m[0mIndexingSupport[0m[0;34m.[0m[0mOUTER[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0m_getitem[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     93[0m         )
+[1;32m     94[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/core/indexing.py[0m in [0;36mexplicit_indexing_adapter[0;34m(key, shape, indexing_support, raw_indexing_method)[0m
+[1;32m    708[0m     """
+[1;32m    709[0m     [0mraw_key[0m[0;34m,[0m [0mnumpy_indices[0m [0;34m=[0m [0mdecompose_indexer[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mshape[0m[0;34m,[0m [0mindexing_support[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 710[0;31m     [0mresult[0m [0;34m=[0m [0mraw_indexing_method[0m[0;34m([0m[0mraw_key[0m[0;34m.[0m[0mtuple[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    711[0m     [0;32mif[0m [0mnumpy_indices[0m[0;34m.[0m[0mtuple[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    712[0m         [0;31m# index the loaded np.ndarray[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/xarray/backends/netCDF4_.py[0m in [0;36m_getitem[0;34m(self, key)[0m
+[1;32m    112[0m                 [0;34m"your data into memory first by calling .load()."[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    113[0m             )
+[0;32m--> 114[0;31m             [0;32mraise[0m [0mIndexError[0m[0;34m([0m[0mmsg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    115[0m         [0;32mreturn[0m [0marray[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    116[0m [0;34m[0m[0m
+
+[0;31mIndexError[0m: The indexing operation you are attempting to perform is not valid on netCDF4.Variable object. Try loading your data into memory first by calling .load().
+IndexError: The indexing operation you are attempting to perform is not valid on netCDF4.Variable object. Try loading your data into memory first by calling .load().
+

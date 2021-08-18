@@ -1,0 +1,7 @@
+GSForge.operations.analytics module
+===================================
+
+.. automodule:: GSForge.operations.analytics
+   :members:
+   :undoc-members:
+   :show-inheritance:

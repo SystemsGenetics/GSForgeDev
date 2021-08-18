@@ -1,0 +1,1428 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GSForge.models package &mdash; gsforge v0.6beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GSForge.operations package" href="GSForge.operations.html" />
+    <link rel="prev" title="GSForge package" href="GSForge.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Guide / Tutorial:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tour.html"> Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/gem_creation.html"> Annotated Expression Matrix Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/set_and_collection_creation.html"> Set and Collection Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Interface_Guide.html"> Interface Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Plotting_Guide.html"> Plotting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/R_integration.html"> R Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/analysis_resources.html"> Analysis Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/plot_gallery/ref_plots.html"> Reference Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/Normalizations/norm_index.html"> Normalization Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Walkthroughs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/oryza_sativa/oryza_sativa_index.html"> Oryza sativa</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GSForge.html">GSForge package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="GSForge.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">GSForge.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.operations.html">GSForge.operations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.plots.html">GSForge.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.utils.html">GSForge.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GSForge.html#module-GSForge">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">GSForge</a> &raquo;</li>
+        
+          <li><a href="GSForge.html">GSForge package</a> &raquo;</li>
+        
+      <li>GSForge.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/API/GSForge.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gsforge-models-package">
+<h1>GSForge.models package<a class="headerlink" href="#gsforge-models-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-GSForge.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-GSForge.models" title="Permalink to this headline">¶</a></h2>
+<p>There are two core data models in <strong>GSForge</strong>, both of which store their associated data
+in <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object under a <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute. You are encouraged to consult the
+<a class="reference external" href="http://xarray.pydata.org/en/stable/">xarray documentation</a>
+for how to perform any transform or selection not provided by <em>GSForge</em>.</p>
+<section id="core-data-classes">
+<h3>Core Data Classes<a class="headerlink" href="#core-data-classes" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><strong>AnnotatedGEM</strong></dt><dd><p>Contains the gene expression matrix, which is indexed by a ‘Gene’
+and ‘Sample’ coordinates. This <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object also contains
+(but is not limited to) phenotype information as well.</p>
+</dd>
+<dt><strong>GeneSet</strong></dt><dd><p>A GeneSet is a set of genes and any associated values. A GeneSet
+can a set of ‘supported’ genes, <em>i.e.</em> genes that are ‘within’ a
+given GeneSet.</p>
+</dd>
+</dl>
+<p>These core data classes are constructed with a limited set of packages:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xarray</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">param</span></code></p></li>
+</ul>
+<p>This allows the creation of container images without interactive visualization libraries.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.models.</span></span><span class="sig-name descname"><span class="pre">AnnotatedGEM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.AnnotatedGEM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">param.parameterized.Parameterized</span></code></p>
+<p>A data class for a gene expression matrix and any associated sample or gene annotations.</p>
+<p>This model holds the count expression matrix, and any associated labels
+or annotations as an <code class="docutils literal notranslate"><span class="pre">xarray.DataSet</span></code> object under the <code class="docutils literal notranslate"><span class="pre">.data</span></code> attribute.
+By default this dataset will be expected to have its indexes named “Gene”
+and “Sample”, although there are parameters to override those arrays and
+index names used.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">data</span></code> = param.ClassSelector(readonly=False)</dt><dd><p>An <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object that contains the Gene Expression Matrix, and any 
+    needed annotations. This <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object is expected to have a count 
+    array named ‘counts’, that has coordinates (‘Gene’, ‘Sample’).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">count_array_name</span></code> = param.String(readonly=False)</dt><dd><p>This parameter controls which variable from the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> should be
+    considered to be the ‘count’ variable.
+    Consider using this if you require different index names, or wish to control 
+    which count array among many should be used by default.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">sample_index_name</span></code> = param.String(readonly=False)</dt><dd><p>This parameter controls which variable from the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> should be
+    considered to be the ‘sample’ coordinate.
+    Consider using this if you require different coordinate names.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gene_index_name</span></code> = param.String(readonly=False)</dt><dd><p>This parameter controls which variable from the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> should be 
+    considered to be the ‘gene index’ coordinate.
+    Consider using this if you require different coordinate names.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.count_array_name">
+<span class="sig-name descname"><span class="pre">count_array_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'counts'</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.count_array_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.sample_index_name">
+<span class="sig-name descname"><span class="pre">sample_index_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Sample'</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.sample_index_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.gene_index_name">
+<span class="sig-name descname"><span class="pre">gene_index_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Gene'</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.gene_index_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.gene_index">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gene_index</span></span><em class="property"><span class="pre">:</span> <span class="pre">xarray.core.dataarray.DataArray</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.gene_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire gene index of this AnnotatedGEM object as an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p>
+<p>The variable or coordinate that this returns is controlled by the
+<cite>gene_index_name</cite> parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The complete gene index of this AnnotatedGEM.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>xarray.DataArray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.sample_index">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sample_index</span></span><em class="property"><span class="pre">:</span> <span class="pre">xarray.core.dataarray.DataArray</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.sample_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire sample index of this AnnotatedGEM object as an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p>
+<p>The actual variable or coordinate that this returns is controlled by the
+<cite>sample_index_name</cite> parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The complete sample index of this AnnotatedGEM.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>xarray.DataArray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.count_array_names">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">count_array_names</span></span><em class="property"><span class="pre">:</span> <span class="pre">List[str]</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.count_array_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all available count arrays contained within this AnnotatedGEM object.</p>
+<p>This is done simply by returning all data variables that have the same dimension set
+as the default count array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of available count arrays in this AnnotatedGEM.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.infer_variables">
+<span class="sig-name descname"><span class="pre">infer_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantile_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.infer_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Infer categories for the variables in the AnnotatedGEM’s labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quantile_size</strong> (<em>int</em>) – The maximum number of unique elements before a variable is no
+longer considered as a <cite>quantile-able</cite> set of values.</p></li>
+<li><p><strong>skip</strong> (<em>bool</em>) – The variables to be skipped.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of the inferred value types.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.from_netcdf">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">netcdf_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models._AnnotatedGEM.AnnotatedGEM"><span class="pre">GSForge.models._AnnotatedGEM.AnnotatedGEM</span></a></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.from_netcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct an <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code> object from a netcdf (.nc) file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>netcdf_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – A path to a <cite>netcdf</cite> file. If this file has different index names than default
+(Gene, Sample, counts), be sure to explicitly set those parameters
+(<cite>gene_index_name</cite>, <cite>sample_index_name</cite>, <cite>count_array_name</cite>).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>AnnotatedGEM</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new instance of the AnnotatedGEM class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.from_pandas">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_pandas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models._AnnotatedGEM.AnnotatedGEM"><span class="pre">GSForge.models._AnnotatedGEM.AnnotatedGEM</span></a></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.from_pandas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads in a GEM pandas.DataFrame and an optional annotation DataFrame. These
+must share the same sample index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>count_df</strong> (<em>pd.DataFrame</em>) – The gene expression matrix as a <cite>pandas.DataFrame</cite>.
+This file is assumed to have genes as rows and samples as columns.</p></li>
+<li><p><strong>label_df</strong> (<em>pd.DataFrame</em>) – The gene annotation data as a <cite>pandas.DataFrame</cite>.
+This file is assumed to have samples as rows and annotation observations
+as columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>AnnotatedGEM</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new instance of the AnnotatedGEM class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.xrarray_gem_from_pandas">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">xrarray_gem_from_pandas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose_counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xarray.core.dataset.Dataset</span></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.xrarray_gem_from_pandas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stitch together a gene expression and annotation DataFrames into a single <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>count_df</strong> (<em>pd.DataFrame</em>) – The gene expression matrix as a <cite>pandas.DataFrame</cite>; assumed to have genes as rows and
+samples as columns.</p></li>
+<li><p><strong>label_df</strong> (<em>pd.DataFrame</em>) – The gene annotation data as a <cite>pandas.DataFrame</cite>; assumed to have samples as rows and
+annotations as columns.</p></li>
+<li><p><strong>transpose_counts</strong> (<em>bool</em>) – Transpose the count matrix from (genes as rows, samples as columns)
+to (samples as rows, observations as columns).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>xarray.Dataset</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Containing the gene expression matrix and the gene annotation data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.from_files">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose_counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models._AnnotatedGEM.AnnotatedGEM"><span class="pre">GSForge.models._AnnotatedGEM.AnnotatedGEM</span></a></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.from_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code> object from file paths and optional parsing arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>count_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – Path to the gene expression matrix.</p></li>
+<li><p><strong>label_path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – Path to the gene annotation data.</p></li>
+<li><p><strong>count_kwargs</strong> (<em>dict</em>) – A dictionary of arguments to be passed to <code class="docutils literal notranslate"><span class="pre">pandas.read_csv</span></code> for the count matrix.</p></li>
+<li><p><strong>label_kwargs</strong> (<em>dict</em>) – A dictionary of arguments to be passed to <code class="docutils literal notranslate"><span class="pre">pandas.read_csv</span></code> for the annotations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>AnnotatedGEM</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new instance of the AnnotatedGEM class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.from_geo_id">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_geo_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geo_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'./'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models._AnnotatedGEM.AnnotatedGEM"><span class="pre">GSForge.models._AnnotatedGEM.AnnotatedGEM</span></a></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.from_geo_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#GSForge.models.AnnotatedGEM.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save as a netcdf (.nc) to the file at <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – The filepath to save to. This should use the <code class="docutils literal notranslate"><span class="pre">.nc</span></code> extension.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>str</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The path to which the file was saved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.AnnotatedGEM.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'AnnotatedGEM'</span></em><a class="headerlink" href="#GSForge.models.AnnotatedGEM.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.models.</span></span><span class="sig-name descname"><span class="pre">GeneSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">param.parameterized.Parameterized</span></code></p>
+<p>A data class for a the result of a gene selection or analysis.</p>
+<p>A GeneSet can also be a measurement or ranking of a set of genes, and this could include all of
+the ‘available’ genes. In such cases a boolean array ‘support’ indicates membership in the GeneSet.</p>
+<p><strong>Create a GeneSet from a .netcf file path, ``pandas.DataFrame``, ``np.ndarray`` or list of genes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Supply any of the above objects along with any other parameters to create a GeneSet.</span>
+<span class="n">my_geneset</span> <span class="o">=</span> <span class="n">GeneSet</span><span class="p">(</span><span class="o">&lt;</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xarray</span><span class="o">.</span><span class="n">DataSet</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">str</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="c1"># One can also explicitly call the constructors for the types above, e.g.:</span>
+<span class="n">my_geneset</span> <span class="o">=</span> <span class="n">GeneSet</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="o">&lt;</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Get supported Genes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_geneset</span><span class="o">.</span><span class="n">get_support</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Set the support with a list or array of genes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_geneset</span><span class="o">.</span><span class="n">set_support_by_genes</span><span class="p">(</span><span class="n">my_genes</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">data</span></code> = param.Parameter(readonly=False)</dt><dd><p>Contains a gene-index <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object, it should have
+only those genes that are considered ‘within’ the GeneSet
+in the index, or a boolean variable named ‘support’.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">support_index_name</span></code> = param.String(readonly=False)</dt><dd><p>This parameter controls which variable should be considered to be the
+(boolean) variable indicating membership in this GeneSet.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gene_index_name</span></code> = param.String(readonly=False)</dt><dd><p>This parameter controls which variable from the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> should be 
+considered to be the ‘gene index’ coordinate.
+Consider using this if you require different coordinate names.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.GeneSet.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.support_index_name">
+<span class="sig-name descname"><span class="pre">support_index_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'support'</span></em><a class="headerlink" href="#GSForge.models.GeneSet.support_index_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.gene_index_name">
+<span class="sig-name descname"><span class="pre">gene_index_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Gene'</span></em><a class="headerlink" href="#GSForge.models.GeneSet.gene_index_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_pandas">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_pandas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSet.from_pandas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a GeneSet from a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataframe</strong> (<em>pd.DataFrame</em>) – A <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> object. Assumed to be indexed by genes names.</p></li>
+<li><p><strong>genes</strong> (<em>np.ndarray</em>) – If you have a separate (but ordered the same!) gene array that corresponds to your data,
+it can be passed here to be set as the index appropriately.</p></li>
+<li><p><strong>attrs</strong> (<em>dict</em>) – A dictionary of attributes to be added to the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset.attrs</span></code> attribute.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_GeneSets">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_GeneSets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">gene_sets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'union'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.from_GeneSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new GeneSet by combining all the genes in the given GeneSets.</p>
+<p>No variables or attributes from the original GeneSets are maintained in this process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*gene_sets</strong> (<a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models.GeneSet"><em>GeneSet</em></a>) – One or more <code class="docutils literal notranslate"><span class="pre">GSForge.GeneSet</span></code> objects.</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – Mode by which to combine the given <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code> objects given.</p></li>
+<li><p><strong>attrs</strong> (<em>dict</em>) – A dictionary of attributes to be added to the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset.attrs</span></code> attribute.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet built from the given GeneSets as described by <cite>mode</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_bool_array">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_bool_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bool_array</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete_gene_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.from_bool_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a GeneSet object from a boolean support array. This requires a matching
+gene index array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bool_array</strong> (<em>np.ndarray</em>) – A boolean array representing support within this GeneSet.</p></li>
+<li><p><strong>complete_gene_index</strong> (<em>np.ndarray</em>) – The complete gene index.</p></li>
+<li><p><strong>attrs</strong> (<em>dict</em>) – A dictionary of attributes to be added to the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset.attrs</span></code> attribute.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_gene_array">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_gene_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected_gene_array</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete_gene_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.from_gene_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses arguments for a new GeneSet from an array or list of ‘selected’ genes. Such genes are
+assumed to be within the optionally supplied <cite>complete_gene_index</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selected_gene_array</strong> (<em>np.ndarray</em>) – The genes ‘selected’ to be within the support of this GeneSet.</p></li>
+<li><p><strong>complete_gene_index</strong> (<em>np.ndarray</em>) – Optional. The complete gene index to which those selected genes belong.</p></li>
+<li><p><strong>attrs</strong> (<em>dict</em>) – A dictionary of attributes to be added to the <code class="docutils literal notranslate"><span class="pre">xarray.Dataset.attrs</span></code> attribute.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_xarray_dataset">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_xarray_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataset.Dataset</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.from_xarray_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a GeneSet from an <cite>xarray.Dataset</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>xr.Dataset</em>) – An <cite>xarray.Dataset</cite> object. See the <cite>.data</cite> parameter of this class.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.from_netcdf">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSet.from_netcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a <cite>GeneSet</cite> object from a <cite>netcdf</cite> file path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – The path to the .netcdf file to be used.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>) – Other parameters to set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSet object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.gene_index">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gene_index</span></span><em class="property"><span class="pre">:</span> <span class="pre">xarray.core.dataarray.DataArray</span></em><a class="headerlink" href="#GSForge.models.GeneSet.gene_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire gene index of this GeneSet object as an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p>
+<p>The variable or coordinate that this returns is controlled by the <cite>gene_index_name</cite>
+parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>xr.DataArray</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>A copy of the entire gene index of this GeneSet as an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.get_support">
+<span class="sig-name descname"><span class="pre">get_support</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSet.get_support" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of genes ‘supported in this GeneSet.</p>
+<p>The value that this return is (by default) controlled by the self.support_index_name
+parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>A numpy array of the genes ‘supported’ by this GeneSet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.support_exists">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">support_exists</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#GSForge.models.GeneSet.support_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if a support array exists, and that it has at least one member within, returns
+False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.set_support_by_genes">
+<span class="sig-name descname"><span class="pre">set_support_by_genes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">genes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.set_support_by_genes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set this GeneSet support to the given genes. This function calculates the boolean support
+array for the gene index via <code class="docutils literal notranslate"><span class="pre">np.isin(gene_index,</span> <span class="pre">genes)</span></code>. Returns an updated copy of the GeneSet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>genes</strong> (<em>np.ndarray</em>) – An array of genes which represent the “supported” subset within the entire gene index.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Returns an updated copy of the GeneSet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.set_support_from_boolean_array">
+<span class="sig-name descname"><span class="pre">set_support_from_boolean_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boolean_array</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSet" title="GSForge.models._GeneSet.GeneSet"><span class="pre">GSForge.models._GeneSet.GeneSet</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSet.set_support_from_boolean_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set this GeneSet support based on the given boolean array, which must be the same length as the existing
+gene index. Returns an updated copy of the GeneSet.</p>
+<p>This function calculates the boolean support array for the gene index via <cite>np.isin(gene_index, genes)</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>boolean_array</strong> (<em>numpy.ndarray</em>) – A boolean <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSet</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Returns an updated copy of the GeneSet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.get_genes_by_threshold">
+<span class="sig-name descname"><span class="pre">get_genes_by_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_variable</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparison</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'ge'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">within_support</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSet.get_genes_by_threshold" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.get_top_n_genes">
+<span class="sig-name descname"><span class="pre">get_top_n_genes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">score_variable</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">within_support</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSet.get_top_n_genes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">only_supported</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#GSForge.models.GeneSet.to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert this GeneSet.data attribute to a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>. This restricts the data
+returned to include only those genes that are returned by <code class="docutils literal notranslate"><span class="pre">GeneSet.get_support()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>only_supported</strong> (<em>bool</em>) – Defaults to True, set to False if you want all GeneSet data to be in the DataFrame returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> of this <code class="docutils literal notranslate"><span class="pre">GeneSet.data</span></code> attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.save_as_netcdf">
+<span class="sig-name descname"><span class="pre">save_as_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#GSForge.models.GeneSet.save_as_netcdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save this GeneSet as a netcdf (.nc) file in the <cite>target_dir</cite> directory.</p>
+<p>The default filename will be: <cite>{GeneSet.name}.nc</cite>, if the GeneSet does not
+have a name, one must be provided via the <cite>name</cite> argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_dir</strong> (<em>str</em>) – The directory to place the saved GeneSet into.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name to give the GeneSet upon saving.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>str</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The path to which the file was saved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSet.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GeneSet'</span></em><a class="headerlink" href="#GSForge.models.GeneSet.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.models.</span></span><span class="sig-name descname"><span class="pre">GeneSetCollection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSetCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">param.parameterized.Parameterized</span></code></p>
+<p>An interface class which contains an AnnotatedGEM and a dictionary of GeneSet objects.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">gem</span></code> = param.ClassSelector(readonly=False)</dt><dd><p>A GSForge.AnnotatedGEM object.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.gem">
+<span class="sig-name descname"><span class="pre">gem</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.GeneSetCollection.gem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.summarize_gene_sets">
+<span class="sig-name descname"><span class="pre">summarize_gene_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.summarize_gene_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summarize this GeneSetCollection, returns a dictionary of <code class="docutils literal notranslate"><span class="pre">{gene_set_name:</span> <span class="pre">support_length}</span></code>.
+This is used to generate display used in the <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.get_support">
+<span class="sig-name descname"><span class="pre">get_support</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.get_support" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the support array for a given key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The GeneSet from which to get the gene support.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>np.ndarray</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>An array of the genes that make up the support of this <code class="docutils literal notranslate"><span class="pre">GeneSet</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.gene_sets_to_dataframes">
+<span class="sig-name descname"><span class="pre">gene_sets_to_dataframes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_supported</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.gene_sets_to_dataframes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of {key: pd.DataFrame} of the <code class="docutils literal notranslate"><span class="pre">GeneSet.data</span></code>. The DataFrame is limited
+to only those genes that are ‘supported’ within the GeneSet by default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>only_supported</strong> (<em>bool</em>) – Whether to return a subset defined by each GeneSet support, or the complete data frame.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of {key: pd.DataFrame} of the <code class="docutils literal notranslate"><span class="pre">GeneSet.data</span></code> attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.gene_sets_to_csv_files">
+<span class="sig-name descname"><span class="pre">gene_sets_to_csv_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_supported</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.gene_sets_to_csv_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes GeneSet.data as .csv files.</p>
+<p>By default this creates creates a folder with the current working directory and saves the .csv
+files within. By default only genes that are “supported” by a GeneSet are included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_dir</strong> – The target directory to save the .csv files to. This defaults to the name of this
+GeneSetCollection, which creates a folder in the current working directory.</p></li>
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>only_supported</strong> (<em>bool</em>) – Whether to return a subset defined by each GeneSet support, or the complete data frame.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.gene_sets_to_excel_sheet">
+<span class="sig-name descname"><span class="pre">gene_sets_to_excel_sheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_supported</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.gene_sets_to_excel_sheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the GeneSet.data within this GeneSetCollection as a single Excel worksheet.</p>
+<p>By default this sheet is named using the <code class="docutils literal notranslate"><span class="pre">.name</span></code> of this GeneSetCollection. By default
+only genes that are “supported” by a GeneSet are included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Excel sheet. <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> will be appended to the given name.</p></li>
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>only_supported</strong> (<em>bool</em>) – Whether to return a subset defined by each GeneSet support, or the complete data frame.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.as_dict">
+<span class="sig-name descname"><span class="pre">as_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_supports</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.as_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of {name: supported_genes} for each GeneSet, or those specified
+by the <cite>keys</cite> argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+<li><p><strong>empty_supports</strong> – Whether to include GeneSets that have no support array, or no genes supported within
+the support array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary of {name: supported_genes} for each GeneSet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.intersection">
+<span class="sig-name descname"><span class="pre">intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intersection of supported genes in this GeneSet collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>np.ndarray</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Intersection of the supported genes within GeneSets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.union">
+<span class="sig-name descname"><span class="pre">union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.union" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the union of supported genes in this GeneSet collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>np.ndarray</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union of the supported genes within GeneSets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.difference">
+<span class="sig-name descname"><span class="pre">difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'union'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the genes within <cite>primary_key</cite> that are not within the <cite>mode</cite> of the sets
+given in <cite>other_keys</cite>.</p>
+<p>If no <cite>other_keys</cite> are provided, all remaining keys are used.
+The default <cite>mode</cite> is <cite>union</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_key</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The set</p></li>
+<li><p><strong>other_keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys…</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – Mode by which to join the GeneSets given by <cite>other_keys</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>…</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.joint_difference">
+<span class="sig-name descname"><span class="pre">joint_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_join_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'union'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">others_join_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'union'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSetCollection.joint_difference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_keys</strong> – </p></li>
+<li><p><strong>other_keys</strong> – </p></li>
+<li><p><strong>primary_join_mode</strong> – </p></li>
+<li><p><strong>others_join_mode</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.pairwise_unions">
+<span class="sig-name descname"><span class="pre">pairwise_unions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.pairwise_unions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct pairwise permutations of GeneSets within this collection, and return
+the union of each pair in a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of <code class="docutils literal notranslate"><span class="pre">{(GeneSet.name,</span> <span class="pre">GeneSet.name):</span> <span class="pre">gene</span> <span class="pre">support</span> <span class="pre">union}</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.pairwise_intersection">
+<span class="sig-name descname"><span class="pre">pairwise_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.pairwise_intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct pairwise combinations of GeneSets within this collection, and return
+the intersection of each pair in a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of <code class="docutils literal notranslate"><span class="pre">{GeneSet.Name,</span> <span class="pre">GeneSet.name):</span> <span class="pre">GeneSets.get_support()</span> <span class="pre">intersection}</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.pairwise_percent_intersection">
+<span class="sig-name descname"><span class="pre">pairwise_percent_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.pairwise_percent_intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct pairwise permutations of GeneSets within this collection, and return
+the intersection of each pair within a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of <code class="docutils literal notranslate"><span class="pre">{GeneSet.Name,</span> <span class="pre">GeneSet.name):</span> <span class="pre">percent</span> <span class="pre">gene</span> <span class="pre">intersection}</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.construct_standard_specification">
+<span class="sig-name descname"><span class="pre">construct_standard_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.construct_standard_specification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a standard specification that can be used to view unions, intersections and
+differences (unique genes) of the sets within this collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of gene_set keys to return, by default all keys are selected.</p></li>
+<li><p><strong>exclude</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – An optional list of <cite>GeneSet</cite> keys to exclude from the returned dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dict</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A specification dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.merge_specifications">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">merge_specifications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSetCollection.merge_specifications" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges sets of defaultdict(list) objects with common keys.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.process_set_operation_specification">
+<span class="sig-name descname"><span class="pre">process_set_operation_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.process_set_operation_specification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls and stores the results from a specification. The specification must declare
+set operation functions and their arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>specification</strong> (<em>Dict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.from_specification">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_specification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specification</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'processed_specification'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.GeneSetCollection.from_specification" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.from_folder">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gem</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models._AnnotatedGEM.AnnotatedGEM"><span class="pre">GSForge.models._AnnotatedGEM.AnnotatedGEM</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">,</span> </span><span class="pre">IO</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glob_filter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'*.nc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#GSForge.models.GeneSetCollection" title="GSForge.models._GeneSetCollection.GeneSetCollection"><span class="pre">GSForge.models._GeneSetCollection.GeneSetCollection</span></a></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.from_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a <cite>GeneSetCollection</cite> from a directory of saved GeneSet objects.</p>
+<p>The file name of each gene_set.nc file will be used as the key in the <cite>gene_sets</cite> dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gem</strong> (<a class="reference internal" href="#GSForge.models.AnnotatedGEM" title="GSForge.models.AnnotatedGEM"><em>AnnotatedGEM</em></a>) – A <cite>GSForge.AnnotatedGEM</cite> object.</p></li>
+<li><p><strong>target_dir</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>Path</em><em>, </em><em>IO</em><em>[</em><em>AnyStr</em><em>]</em><em>]</em>) – The directory which contains the saved GeneSet .netcdf files.</p></li>
+<li><p><strong>glob_filter</strong> (<em>str</em>) – A glob by which to restrict the files found within <cite>target_dir</cite>.</p></li>
+<li><p><strong>filter_func</strong> (<em>Callable</em>) – A function by which to filter which <cite>xarray.Dataset</cite> objects are included.
+This function should take an <cite>xarray.Dataset</cite> and return a boolean.</p></li>
+<li><p><strong>params</strong> – Parameters to configure the GeneSetCollection.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>GeneSetCollection</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A new GeneSetCollection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#GSForge.models.GeneSetCollection.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save  this collection to <code class="docutils literal notranslate"><span class="pre">target_dir</span></code>. Each GeneSet will be saved as a separate
+.netcdf file within this directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_dir</strong> (<em>str</em>) – The path to which GeneSet <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> .netcdf files will be written.</p></li>
+<li><p><strong>keys</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list of GeneSet keys that should be saved. If this is not provided, all
+GeneSet objects are saved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.GeneSetCollection.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GeneSetCollection'</span></em><a class="headerlink" href="#GSForge.models.GeneSetCollection.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.models.Interface">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.models.</span></span><span class="sig-name descname"><span class="pre">Interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.Interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">param.parameterized.Parameterized</span></code></p>
+<p>The Interface provides common API access for interacting with the <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code>
+and <code class="docutils literal notranslate"><span class="pre">GeneSetCollection</span></code> objects.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">gem</span></code> = param.ClassSelector(readonly=False)</dt><dd><p>An <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code> object.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gene_set_collection</span></code> = param.ClassSelector(readonly=False)</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">GeneSetCollection</span></code> object.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">selected_gene_sets</span></code> = param.ListSelector(readonly=False)</dt><dd><p>A list of keys from the provided GeneSetCollection (stored in gene_set_collection)
+that are to be used for selecting sets of genes from the count matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">selected_genes</span></code> = param.Parameter(readonly=False)</dt><dd><p>A list of genes to use in indexing from the count matrix. This parameter takes
+priority over all other gene selecting methods. That means that selected
+GeneSets (or combinations thereof) will have no effect.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gene_set_mode</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>Controls how any selected gene sets are returned by the interface.
+<strong>complete</strong>
+    Returns the entire gene set of the <code class="docutils literal notranslate"><span class="pre">AnnotatedGEM</span></code>.
+<strong>union</strong>
+    Returns the union of the selected gene sets support.
+<strong>intersection</strong>
+    Returns the intersection of the selected gene sets support.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">sample_subset</span></code> = param.Parameter(readonly=False)</dt><dd><p>A list of samples to use in a given operation. These can be supplied
+directly as a list of genes, or can be drawn from a given GeneSet.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">count_variable</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>The name of the count matrix used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">annotation_variables</span></code> = param.List(readonly=False)</dt><dd><p>The name of the active annotation variable(s). These are the annotation columns that will
+be control the subset returned by <code class="docutils literal notranslate"><span class="pre">y_annotation_data</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">count_mask</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>The type of mask to use for the count matrix.
+<strong>complete</strong>
+    Returns the entire count matrix as numbers.
+<strong>masked</strong> 
+    Returns the entire count matrix with zero or missing as NaN values.
+<strong>dropped</strong> 
+    Returns the count matrix without genes that have zero or missing values.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">annotation_mask</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>The type of mask to use for the target array.
+<strong>complete</strong> 
+    Returns the entire target array.
+<strong>dropped</strong> 
+    Returns the target array without samples that have zero or missing values.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">count_transform</span></code> = param.Callable(readonly=False)</dt><dd><p>A transform that will be run on the <cite>x_data</cite> that is supplied by this Interface. 
+The transform runs on the subset of the matrix that has been selected.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.gem">
+<span class="sig-name descname"><span class="pre">gem</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.gem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.gene_set_collection">
+<span class="sig-name descname"><span class="pre">gene_set_collection</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.gene_set_collection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.selected_gene_sets">
+<span class="sig-name descname"><span class="pre">selected_gene_sets</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[None]</span></em><a class="headerlink" href="#GSForge.models.Interface.selected_gene_sets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.selected_genes">
+<span class="sig-name descname"><span class="pre">selected_genes</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.selected_genes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.gene_set_mode">
+<span class="sig-name descname"><span class="pre">gene_set_mode</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'union'</span></em><a class="headerlink" href="#GSForge.models.Interface.gene_set_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.sample_subset">
+<span class="sig-name descname"><span class="pre">sample_subset</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.sample_subset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.count_variable">
+<span class="sig-name descname"><span class="pre">count_variable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.count_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.annotation_variables">
+<span class="sig-name descname"><span class="pre">annotation_variables</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[None]</span></em><a class="headerlink" href="#GSForge.models.Interface.annotation_variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.count_mask">
+<span class="sig-name descname"><span class="pre">count_mask</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'complete'</span></em><a class="headerlink" href="#GSForge.models.Interface.count_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.annotation_mask">
+<span class="sig-name descname"><span class="pre">annotation_mask</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'complete'</span></em><a class="headerlink" href="#GSForge.models.Interface.annotation_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.count_transform">
+<span class="sig-name descname"><span class="pre">count_transform</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.models.Interface.count_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.active_count_variable">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">active_count_variable</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#GSForge.models.Interface.active_count_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the currently active count matrix.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.gene_index_name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">gene_index_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#GSForge.models.Interface.gene_index_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the gene index.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.sample_index_name">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sample_index_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#GSForge.models.Interface.sample_index_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the sample index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.Interface.get_sample_index">
+<span class="sig-name descname"><span class="pre">get_sample_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#GSForge.models.Interface.get_sample_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currently selected sample index as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An array of the currently selected samples.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.get_selection_indices">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">get_selection_indices</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span></em><a class="headerlink" href="#GSForge.models.Interface.get_selection_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently selected indexes as a dictionary.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.x_count_data">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">x_count_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[xarray.core.dataarray.DataArray]</span></em><a class="headerlink" href="#GSForge.models.Interface.x_count_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently selected ‘x_data’. Usually this will be a subset of the active count array.</p>
+<p>Note: In constructing the a gene index, the count data is constructed first in order to infer
+coordinate selection based on masking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The selection of the currently active count data.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>xarray.Dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.Interface.get_gene_index">
+<span class="sig-name descname"><span class="pre">get_gene_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#GSForge.models.Interface.get_gene_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currently selected gene index as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An array of the currently selected genes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.models.Interface.y_annotation_data">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">y_annotation_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional[Union[xarray.core.dataset.Dataset,</span> <span class="pre">xarray.core.dataarray.DataArray]]</span></em><a class="headerlink" href="#GSForge.models.Interface.y_annotation_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently selected ‘y_data’, or None, based on the <cite>selected_annotation_variables</cite> parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>An <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> of the currently selected y_data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.models.Interface.get_gem_data">
+<span class="sig-name descname"><span class="pre">get_gem_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">single_object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'xarray'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.Interface.get_gem_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns count [and annotation] data based on the current parameters.</p>
+<p>Users should call gsf.get_gem_data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.Interface.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Interface'</span></em><a class="headerlink" href="#GSForge.models.Interface.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.models.CallableInterface">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.models.</span></span><span class="sig-name descname"><span class="pre">CallableInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.models.CallableInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">param.parameterized.ParameterizedFunction</span></code></p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.models.CallableInterface.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'CallableInterface'</span></em><a class="headerlink" href="#GSForge.models.CallableInterface.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GSForge.operations.html" class="btn btn-neutral float-right" title="GSForge.operations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GSForge.html" class="btn btn-neutral float-left" title="GSForge package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

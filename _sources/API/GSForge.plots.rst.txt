@@ -1,0 +1,29 @@
+GSForge.plots package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   GSForge.plots.annotations
+   GSForge.plots.collections
+   GSForge.plots.gem
+   GSForge.plots.results
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   GSForge.plots.abstract_plot_models
+
+Module contents
+---------------
+
+.. automodule:: GSForge.plots
+   :members:
+   :undoc-members:
+   :show-inheritance:

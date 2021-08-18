@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/python/3.7.1/lib/python3.7/asyncio/base_events.py", line 573, in run_until_complete
+    return future.result()
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 559, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+gsf.plots.collections.UpsetPlotInterface(combined_gsc, min_overlap_size=2, 
+                                         upset_kwargs=dict(orientation='vertical'))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m/tmp/ipykernel_5780/614032527.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m gsf.plots.collections.UpsetPlotInterface(combined_gsc, min_overlap_size=2, 
+[0;32m----> 2[0;31m                                          upset_kwargs=dict(orientation='vertical'))
+[0m
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/utils/__init__.py[0m in [0;36mcall[0;34m(*args, **kwargs)[0m
+[1;32m     34[0m [0;34m[0m[0m
+[1;32m     35[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 36[0;31m             [0mresult[0m [0;34m=[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     37[0m         [0;32mreturn[0m [0mresult[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     38[0m [0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/models/_Interface.py[0m in [0;36m__new__[0;34m(cls, *args, **params)[0m
+[1;32m    407[0m                 [0mparams[0m[0;34m[[0m[0;34m"selected_gene_sets"[0m[0;34m][0m [0;34m=[0m [0;34m[[0m[0mparams[0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m"selected_gene_sets"[0m[0;34m)[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    408[0m         [0minst[0m [0;34m=[0m [0mcls[0m[0;34m.[0m[0minstance[0m[0;34m([0m[0;34m**[0m[0mparams[0m[0;34m)[0m  [0;31m# See the param code for more on this `instance` function.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 409[0;31m         [0;32mreturn[0m [0minst[0m[0;34m.[0m[0m__call__[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    410[0m [0;34m[0m[0m
+[1;32m    411[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/GSForge/plots/collections/_upsetplot_interface.py[0m in [0;36m__call__[0;34m(self, *args, **kwargs)[0m
+[1;32m     44[0m         upset_series = self.build_membership_series(self.gene_set_collection.as_dict(keys=self.selected_gene_sets),
+[1;32m     45[0m                                                     min_size=self.min_overlap_size)
+[0;32m---> 46[0;31m         [0;32mreturn[0m [0mupsetplot[0m[0;34m.[0m[0mUpSet[0m[0;34m([0m[0mupset_series[0m[0;34m,[0m [0;34m**[0m[0mself[0m[0;34m.[0m[0mupset_kwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/upsetplot/plotting.py[0m in [0;36m__init__[0;34m(self, data, orientation, sort_by, sort_categories_by, subset_size, sum_over, min_subset_size, max_subset_size, min_degree, max_degree, facecolor, other_dots_color, shading_color, with_lines, element_size, intersection_plot_elements, totals_plot_elements, show_counts, show_percentages)[0m
+[1;32m    423[0m                                       [0mmin_degree[0m[0;34m=[0m[0mmin_degree[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    424[0m                                       [0mmax_degree[0m[0;34m=[0m[0mmax_degree[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 425[0;31m                                       reverse=not self._horizontal)
+[0m[1;32m    426[0m         self.subset_styles = [{"facecolor": facecolor}
+[1;32m    427[0m                               for i in range(len(self.intersections))]
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/upsetplot/plotting.py[0m in [0;36m_process_data[0;34m(df, sort_by, sort_categories_by, subset_size, sum_over, min_subset_size, max_subset_size, min_degree, max_degree, reverse)[0m
+[1;32m    150[0m                   [0msum_over[0m[0;34m,[0m [0mmin_subset_size[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0mmax_subset_size[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    151[0m                   min_degree=None, max_degree=None, reverse=False):
+[0;32m--> 152[0;31m     [0mdf[0m[0;34m,[0m [0magg[0m [0;34m=[0m [0m_aggregate_data[0m[0;34m([0m[0mdf[0m[0;34m,[0m [0msubset_size[0m[0;34m,[0m [0msum_over[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    153[0m     [0mtotal[0m [0;34m=[0m [0magg[0m[0;34m.[0m[0msum[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    154[0m     [0mdf[0m [0;34m=[0m [0m_check_index[0m[0;34m([0m[0mdf[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/virtualenv/python3.7.1/lib/python3.7/site-packages/upsetplot/plotting.py[0m in [0;36m_aggregate_data[0;34m(df, subset_size, sum_over)[0m
+[1;32m     28[0m         raise ValueError('subset_size should be one of %s. Got %r'
+[1;32m     29[0m                          % (_SUBSET_SIZE_VALUES, subset_size))
+[0;32m---> 30[0;31m     [0;32mif[0m [0mdf[0m[0;34m.[0m[0mndim[0m [0;34m==[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     31[0m         [0;31m# Series[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     32[0m         [0minput_name[0m [0;34m=[0m [0mdf[0m[0;34m.[0m[0mname[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mAttributeError[0m: type object 'ValueError' has no attribute 'ndim'
+AttributeError: type object 'ValueError' has no attribute 'ndim'
+

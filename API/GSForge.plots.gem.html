@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GSForge.plots.gem package &mdash; gsforge v0.6beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GSForge.plots.results package" href="GSForge.plots.results.html" />
+    <link rel="prev" title="GSForge.plots.collections package" href="GSForge.plots.collections.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Guide / Tutorial:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tour.html"> Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/gem_creation.html"> Annotated Expression Matrix Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/set_and_collection_creation.html"> Set and Collection Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Interface_Guide.html"> Interface Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Plotting_Guide.html"> Plotting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/R_integration.html"> R Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/analysis_resources.html"> Analysis Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/plot_gallery/ref_plots.html"> Reference Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/Normalizations/norm_index.html"> Normalization Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Walkthroughs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/oryza_sativa/oryza_sativa_index.html"> Oryza sativa</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GSForge.html">GSForge package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="GSForge.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="GSForge.models.html">GSForge.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.operations.html">GSForge.operations package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="GSForge.plots.html">GSForge.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.utils.html">GSForge.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GSForge.html#module-GSForge">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">GSForge</a> &raquo;</li>
+        
+          <li><a href="GSForge.html">GSForge package</a> &raquo;</li>
+        
+          <li><a href="GSForge.plots.html">GSForge.plots package</a> &raquo;</li>
+        
+      <li>GSForge.plots.gem package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/API/GSForge.plots.gem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gsforge-plots-gem-package">
+<h1>GSForge.plots.gem package<a class="headerlink" href="#gsforge-plots-gem-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-GSForge.plots.gem">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-GSForge.plots.gem" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">SamplewiseDistributions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Provides a base that iterates through the selected samples.</p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">hue_key</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">hue_colors</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmap</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">sample_colormap</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">datashade</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynspread</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">kde_kwargs</span></code> = param.Dict(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">kde_sample_size</span></code> = param.Integer(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.hue_key">
+<span class="sig-name descname"><span class="pre">hue_key</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.hue_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.hue_colors">
+<span class="sig-name descname"><span class="pre">hue_colors</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.hue_colors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.cmap">
+<span class="sig-name descname"><span class="pre">cmap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'glasbey'</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.cmap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.sample_colormap">
+<span class="sig-name descname"><span class="pre">sample_colormap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.sample_colormap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.datashade">
+<span class="sig-name descname"><span class="pre">datashade</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.datashade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.dynspread">
+<span class="sig-name descname"><span class="pre">dynspread</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.dynspread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.kde_kwargs">
+<span class="sig-name descname"><span class="pre">kde_kwargs</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'filled':</span> <span class="pre">False}</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.kde_kwargs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.kde_sample_size">
+<span class="sig-name descname"><span class="pre">kde_sample_size</span></span><em class="property"> <span class="pre">=</span> <span class="pre">200</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.kde_sample_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.kde_linespace">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">kde_linespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.kde_linespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the math behind the univariate_kde as implemented by Holoviews so that
+it can be applied with <cite>numpy.apply_along_axis</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.evaluate_kde">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">evaluate_kde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_space</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.evaluate_kde" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.plot_sample_wise_kde">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">plot_sample_wise_kde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Sample'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_axis_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'counts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.plot_sample_wise_kde" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.SamplewiseDistributions.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'SamplewiseDistributions'</span></em><a class="headerlink" href="#GSForge.plots.gem.SamplewiseDistributions.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">GeneVsCountsScatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Display the counts of a small selection of genes on a scatter plot (genes vs counts).</p>
+<p>This function is a <cite>GSForge.OperationInterface</cite> method, and shares those common parameters.</p>
+<p>A selection of genes must be supplied to this function, either specifically via the
+<cite>selected_genes</cite> parameter, or implicitly by the selection or combination of some
+GeneSet support arrays via a GeneSetCollection.</p>
+<p>A warning is generated if the number of genes surpasses a ‘soft_max’ parameter.
+This is only there to prevent useless, accidental plots of many thousands of genes.
+You would need to override it to show more than 50 genes by default.</p>
+<p>Parameters specific to this function:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hue</strong> – Color by which to shade the observations.</p></li>
+<li><p><strong>soft_max</strong> – The number of genes above which this function will return a ValueError rather than
+attempt to plot an unreasonable number of genes.</p></li>
+<li><p><strong>backend</strong> – The selected plotting backend to use for display. Options are [“bokeh”, “matplotlib”].</p></li>
+<li><p><strong>apply_default_opts</strong> – Whether to apply the default styling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>holoviews.Layout</cite> object. The display of this object depends on the currently
+selected backend.</p>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">hue</span></code> = param.String(readonly=False)</dt><dd><p>Color by which to shade the observations.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">soft_max</span></code> = param.Integer(readonly=False)</dt><dd><p>The number of genes above which this function will return a ValueError rather than attempt to 
+plot an unreasonable number of genes.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.hue">
+<span class="sig-name descname"><span class="pre">hue</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.hue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.soft_max">
+<span class="sig-name descname"><span class="pre">soft_max</span></span><em class="property"> <span class="pre">=</span> <span class="pre">250</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.soft_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.genewise_scatter">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">genewise_scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Gene'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Sample'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'counts'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.genewise_scatter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneVsCountsScatter.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GeneVsCountsScatter'</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneVsCountsScatter.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">GenewiseAggregateScatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Displays the output of selected aggregations upon the count array on a scatter plot with optional
+adjoined kernel density estimates. e.g. mean counts vs mean variance etc. By default such outputs are
+log2 transformed as well.</p>
+<p>This function is a <cite>GSForge.OperationInterface</cite> method, and shares those common parameters.</p>
+<dl class="simple">
+<dt>Axis aggregation functions:</dt><dd><ul class="simple">
+<li><p>frequency</p></li>
+<li><p>mean</p></li>
+<li><p>variance</p></li>
+<li><p>standard_dev</p></li>
+<li><p>fano</p></li>
+<li><p>mean_rank</p></li>
+<li><p>cv_squared</p></li>
+</ul>
+</dd>
+</dl>
+<p>Parameters specific to this function:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_axis_selector</strong> – Select from the available axis aggregation functions.</p></li>
+<li><p><strong>y_axis_selector</strong> – Select from the available axis aggregation functions.</p></li>
+<li><p><strong>datashade</strong> – Whether to apply the datashader.datashade operation.</p></li>
+<li><p><strong>dynspread</strong> – Whether to apply the datashader.dynspread operation.</p></li>
+<li><p><strong>backend</strong> – The selected plotting backend to use for display. Options are [“bokeh”, “matplotlib”].</p></li>
+<li><p><strong>apply_default_opts</strong> – Whether to apply the default styling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>holoviews.Layout</cite> object. The display of this object depends on the currently
+selected backend.</p>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">datashade</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynspread</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">adjoint_distributions</span></code> = param.Boolean(readonly=False)</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">x_axis_selector</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>Select from the available axis aggregation functions.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">y_axis_selector</span></code> = param.ObjectSelector(readonly=False)</dt><dd><p>Select from the available axis aggregation functions.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.axis_functions">
+<span class="sig-name descname"><span class="pre">axis_functions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'cv_squared':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'fano':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'frequency':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'mean':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'mean_rank':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'standard_dev':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;,</span> <span class="pre">'variance':</span> <span class="pre">&lt;function</span> <span class="pre">GenewiseAggregateScatter.&lt;lambda&gt;&gt;}</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.axis_functions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.datashade">
+<span class="sig-name descname"><span class="pre">datashade</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.datashade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.dynspread">
+<span class="sig-name descname"><span class="pre">dynspread</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.dynspread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.adjoint_distributions">
+<span class="sig-name descname"><span class="pre">adjoint_distributions</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.adjoint_distributions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.x_axis_selector">
+<span class="sig-name descname"><span class="pre">x_axis_selector</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'mean'</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.x_axis_selector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.y_axis_selector">
+<span class="sig-name descname"><span class="pre">y_axis_selector</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'variance'</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.y_axis_selector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.scatter_dist">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">scatter_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_kdims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_kdims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datashade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynspread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjoint_distributions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.scatter_dist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.scatter_dist_by_mappings">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">scatter_dist_by_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_kdims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_kdims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mappings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Gene'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datashade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynspread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjoint_distributions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.scatter_dist_by_mappings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GenewiseAggregateScatter.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GenewiseAggregateScatter'</span></em><a class="headerlink" href="#GSForge.plots.gem.GenewiseAggregateScatter.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">RasterGEM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.RasterGEM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">plot_options</span></code> = param.Parameter(readonly=False)</dt><dd><p>User supplied options to the plotting functions. If provided (and is not None), these will take
+    precedence over a functions built-in defaults.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">hue</span></code> = param.String(readonly=False)</dt><dd><p>Color by which to shade the observations.</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">cmap</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">canvas_opts</span></code> = param.Dict(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.hue">
+<span class="sig-name descname"><span class="pre">hue</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.hue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.cmap">
+<span class="sig-name descname"><span class="pre">cmap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.cmap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.plot_options">
+<span class="sig-name descname"><span class="pre">plot_options</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'plot_height':</span> <span class="pre">400,</span> <span class="pre">'plot_width':</span> <span class="pre">800}</span></em><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.plot_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.canvas_opts">
+<span class="sig-name descname"><span class="pre">canvas_opts</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.canvas_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.gem_raster">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">gem_raster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.gem_raster" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.colorized_gem_raster">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">colorized_gem_raster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas_opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.colorized_gem_raster" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.RasterGEM.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'RasterGEM'</span></em><a class="headerlink" href="#GSForge.plots.gem.RasterGEM.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">GroupedGeneCovariance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">group_variable</span></code> = param.String(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">x_group_label</span></code> = param.String(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">y_group_label</span></code> = param.String(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">grouped_data</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">datashade</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynspread</span></code> = param.Boolean(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.group_variable">
+<span class="sig-name descname"><span class="pre">group_variable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.group_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.x_group_label">
+<span class="sig-name descname"><span class="pre">x_group_label</span></span><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.x_group_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.y_group_label">
+<span class="sig-name descname"><span class="pre">y_group_label</span></span><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.y_group_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.grouped_data">
+<span class="sig-name descname"><span class="pre">grouped_data</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.grouped_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.datashade">
+<span class="sig-name descname"><span class="pre">datashade</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.datashade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.dynspread">
+<span class="sig-name descname"><span class="pre">dynspread</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.dynspread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.grouped_mean_scatter">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">grouped_mean_scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count_xarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_group_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_group_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datashade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynspread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.grouped_mean_scatter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GroupedGeneCovariance.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GroupedGeneCovariance'</span></em><a class="headerlink" href="#GSForge.plots.gem.GroupedGeneCovariance.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">EmpiricalCumulativeDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">hue_key</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">hue_colors</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">cmap</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">sample_colormap</span></code> = param.Parameter(readonly=False)</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">x_axis_transform</span></code> = param.Parameter(readonly=False)</dt><dd><p>A transform (usually log2) for getting a viewable spread of the results.</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">datashade</span></code> = param.Boolean(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dynspread</span></code> = param.Boolean(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.hue_key">
+<span class="sig-name descname"><span class="pre">hue_key</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.hue_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.hue_colors">
+<span class="sig-name descname"><span class="pre">hue_colors</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.hue_colors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.cmap">
+<span class="sig-name descname"><span class="pre">cmap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'glasbey'</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.cmap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.sample_colormap">
+<span class="sig-name descname"><span class="pre">sample_colormap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.sample_colormap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.x_axis_transform">
+<span class="sig-name descname"><span class="pre">x_axis_transform</span></span><em class="property"> <span class="pre">=</span> <span class="pre">('log</span> <span class="pre">2',</span> <span class="pre">&lt;function</span> <span class="pre">EmpiricalCumulativeDistribution.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.x_axis_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.datashade">
+<span class="sig-name descname"><span class="pre">datashade</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.datashade" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.dynspread">
+<span class="sig-name descname"><span class="pre">dynspread</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.dynspread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.plot_sample_wise_ecdf">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">plot_sample_wise_ecdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_dim</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Sample'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_axis_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'counts'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.plot_sample_wise_ecdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw sample-wise empirical cumulative distribution functions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.EmpiricalCumulativeDistribution.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'EmpiricalCumulativeDistribution'</span></em><a class="headerlink" href="#GSForge.plots.gem.EmpiricalCumulativeDistribution.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.gem.</span></span><span class="sig-name descname"><span class="pre">GeneCountOverTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.InterfacePlottingBase" title="GSForge.plots.abstract_plot_models.InterfacePlottingBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.InterfacePlottingBase</span></code></a></p>
+<dl class="simple">
+<dt>For each treatment group:</dt><dd><ul class="simple">
+<li><p>Curve: mean / median / trend</p></li>
+<li><p>Points: given by count_variable.</p></li>
+<li><p>Area: log fold change</p></li>
+<li><p>Area: variance, error.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">selected_gene</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">time_variable</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">treatment_variable</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">dispersion_variable</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">log_fold_change</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">treatment_colormap</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">log2_output</span></code> = param.Boolean(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.selected_gene">
+<span class="sig-name descname"><span class="pre">selected_gene</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.selected_gene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.time_variable">
+<span class="sig-name descname"><span class="pre">time_variable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.time_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.treatment_variable">
+<span class="sig-name descname"><span class="pre">treatment_variable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.treatment_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.dispersion_variable">
+<span class="sig-name descname"><span class="pre">dispersion_variable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.dispersion_variable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.log_fold_change">
+<span class="sig-name descname"><span class="pre">log_fold_change</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1.0</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.log_fold_change" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.treatment_colormap">
+<span class="sig-name descname"><span class="pre">treatment_colormap</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.treatment_colormap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.log2_output">
+<span class="sig-name descname"><span class="pre">log2_output</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.log2_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.create_plot_dataframe">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_plot_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_gene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treatment_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispersion_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.create_plot_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.get_plot_dataframe">
+<span class="sig-name descname"><span class="pre">get_plot_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.get_plot_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.create_spread_dataframe">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_spread_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points_dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_fold_spread</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'counts'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">treatment_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispersion_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.create_spread_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.get_spread_dataframe">
+<span class="sig-name descname"><span class="pre">get_spread_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.get_spread_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.plot_as_scatter">
+<span class="sig-name descname"><span class="pre">plot_as_scatter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.plot_as_scatter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.plot_mean_curve">
+<span class="sig-name descname"><span class="pre">plot_mean_curve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.plot_mean_curve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.plot_dispersion_spread">
+<span class="sig-name descname"><span class="pre">plot_dispersion_spread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.plot_dispersion_spread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.bokeh_opts">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.gem.GeneCountOverTime.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'GeneCountOverTime'</span></em><a class="headerlink" href="#GSForge.plots.gem.GeneCountOverTime.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GSForge.plots.results.html" class="btn btn-neutral float-right" title="GSForge.plots.results package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GSForge.plots.collections.html" class="btn btn-neutral float-left" title="GSForge.plots.collections package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

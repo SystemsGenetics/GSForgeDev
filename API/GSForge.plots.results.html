@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GSForge.plots.results package &mdash; gsforge v0.6beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GSForge.plots.abstract_plot_models module" href="GSForge.plots.abstract_plot_models.html" />
+    <link rel="prev" title="GSForge.plots.gem package" href="GSForge.plots.gem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Guide / Tutorial:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tour.html"> Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/gem_creation.html"> Annotated Expression Matrix Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/set_and_collection_creation.html"> Set and Collection Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Interface_Guide.html"> Interface Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Plotting_Guide.html"> Plotting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/R_integration.html"> R Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/analysis_resources.html"> Analysis Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/plot_gallery/ref_plots.html"> Reference Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/Normalizations/norm_index.html"> Normalization Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Walkthroughs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/oryza_sativa/oryza_sativa_index.html"> Oryza sativa</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GSForge.html">GSForge package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="GSForge.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="GSForge.models.html">GSForge.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.operations.html">GSForge.operations package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="GSForge.plots.html">GSForge.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.utils.html">GSForge.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GSForge.html#module-GSForge">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">GSForge</a> &raquo;</li>
+        
+          <li><a href="GSForge.html">GSForge package</a> &raquo;</li>
+        
+          <li><a href="GSForge.plots.html">GSForge.plots package</a> &raquo;</li>
+        
+      <li>GSForge.plots.results package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/API/GSForge.plots.results.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gsforge-plots-results-package">
+<h1>GSForge.plots.results package<a class="headerlink" href="#gsforge-plots-results-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-GSForge.plots.results">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-GSForge.plots.results" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.results.</span></span><span class="sig-name descname"><span class="pre">MeanVsLFC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.ResultPlottingOperation" title="GSForge.plots.abstract_plot_models.ResultPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.ResultPlottingOperation</span></code></a></p>
+<p>Mean vs log-fold-change scatter plot used for visualizing differential gene expression results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>Union</em><em>[</em><em>GSForge.GeneSet</em><em>, </em><em>xarray.Dataset</em><em>, </em><em>pandas.DataFrame</em><em>]</em>) – Data source containing the log-fold change, and p-value variables.</p></li>
+<li><p><strong>log_fold_change_var</strong> (<em>str</em>) – The name of the log-fold change column. Must be a variable within <cite>source</cite>.</p></li>
+<li><p><strong>p_value_var</strong> (<em>str</em>) – The name of the p-value column. Must be a variable within <cite>source</cite>.</p></li>
+<li><p><strong>mean_value_var</strong> (<em>str</em>) – The name of the base mean column. Must be a variable within <cite>source</cite>.</p></li>
+<li><p><strong>log_fold_change_cutoff</strong> (<em>float</em>) – Cutoff to use in grouping and coloring genes. Defaults to 2.0.</p></li>
+<li><p><strong>p_value_cutoff</strong> (<em>float</em>) – Cutoff to use in grouping and coloring genes. Defaults to 1e-6.</p></li>
+<li><p><strong>label_selected_genes</strong> (<em>bool</em>) – Apply (if True) annotations of genes that pass both the log-fold-change and p-value cutoff values.</p></li>
+<li><p><strong>apply_default_opts</strong> (<em>bool</em>) – Whether to apply the default styling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A holoviews scatter plot of log-fold-change versus mean values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>holoviews.Overlay</p>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.ResultPlottingOperation" title="GSForge.plots.abstract_plot_models.ResultPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.ResultPlottingOperation</span></code></a>: source</p>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">log_fold_change_var</span></code> = param.String(readonly=False)</dt><dd><p>The name of the log-fold change column. Must be a variable within <cite>source</cite>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">p_value_var</span></code> = param.String(readonly=False)</dt><dd><p>The name of the p-value column. Must be a variable within <cite>source</cite>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">log_fold_change_cutoff</span></code> = param.Number(readonly=False)</dt><dd><p>Cutoff to use in grouping and coloring genes. Defaults to 2.0.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">p_value_cutoff</span></code> = param.Number(readonly=False)</dt><dd><p>Cutoff to use in grouping and coloring genes. Defaults to 1e-6.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mean_value_var</span></code> = param.String(readonly=False)</dt><dd><p>The name of the base mean column. Must be a variable within <cite>source</cite>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">label_selected_genes</span></code> = param.Boolean(readonly=False)</dt><dd><p>Apply (if True) annotations of genes that pass both the log-fold-change and p-value cutoff values.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.log_fold_change_var">
+<span class="sig-name descname"><span class="pre">log_fold_change_var</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.log_fold_change_var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.p_value_var">
+<span class="sig-name descname"><span class="pre">p_value_var</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.p_value_var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.log_fold_change_cutoff">
+<span class="sig-name descname"><span class="pre">log_fold_change_cutoff</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2.0</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.log_fold_change_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.p_value_cutoff">
+<span class="sig-name descname"><span class="pre">p_value_cutoff</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-06</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.p_value_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.mean_value_var">
+<span class="sig-name descname"><span class="pre">mean_value_var</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.mean_value_var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.label_selected_genes">
+<span class="sig-name descname"><span class="pre">label_selected_genes</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.label_selected_genes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.mean_vs_lfc">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">mean_vs_lfc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataset.Dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_fold_change_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_value_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean_value_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_fold_change_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_value_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selected_genes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Gene'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">holoviews.core.overlay.NdOverlay</span></span></span><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.mean_vs_lfc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.MeanVsLFC.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'MeanVsLFC'</span></em><a class="headerlink" href="#GSForge.plots.results.MeanVsLFC.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.plots.results.</span></span><span class="sig-name descname"><span class="pre">Volcano</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.Volcano" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.ResultPlottingOperation" title="GSForge.plots.abstract_plot_models.ResultPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.ResultPlottingOperation</span></code></a></p>
+<p>A volcano plot for examining differential gene expression results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>Union</em><em>[</em><em>GSForge.GeneSet</em><em>, </em><em>xarray.Dataset</em><em>, </em><em>pandas.DataFrame</em><em>]</em>) – Data source containing the log-fold change, and p-value variables.</p></li>
+<li><p><strong>log_fold_change_var</strong> (<em>str</em>) – The name of the log-fold change column. Must be a variable within <cite>source</cite>.</p></li>
+<li><p><strong>p_value_var</strong> (<em>str</em>) – The name of the p-value column. Must be a variable within <cite>source</cite>.</p></li>
+<li><p><strong>log_fold_change_cutoff</strong> (<em>float</em>) – Cutoff to use in grouping and coloring genes. Defaults to 2.0.</p></li>
+<li><p><strong>p_value_cutoff</strong> (<em>float</em>) – Cutoff to use in grouping and coloring genes. Defaults to 1e-6.</p></li>
+<li><p><strong>label_selected_genes</strong> (<em>bool</em>) – Apply (if True) annotations of genes that pass both the log-fold-change and p-value cutoff values.</p></li>
+<li><p><strong>apply_default_opts</strong> (<em>bool</em>) – Whether to apply the default styling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>volcano scatter plot</strong> – A holoviews scatter plot of log-fold-change versus -log10(p-values).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>holoviews.Overlay</p>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.AbstractPlottingOperation" title="GSForge.plots.abstract_plot_models.AbstractPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.AbstractPlottingOperation</span></code></a>: apply_default_opts, plot_options</p>
+<p><a class="reference internal" href="GSForge.plots.abstract_plot_models.html#GSForge.plots.abstract_plot_models.ResultPlottingOperation" title="GSForge.plots.abstract_plot_models.ResultPlottingOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.plots.abstract_plot_models.ResultPlottingOperation</span></code></a>: source</p>
+</div></blockquote>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">log_fold_change_var</span></code> = param.String(readonly=False)</dt><dd><p>The name of the log-fold change column. Must be a variable within <cite>source</cite>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">p_value_var</span></code> = param.String(readonly=False)</dt><dd><p>The name of the p-value column. Must be a variable within <cite>source</cite>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">log_fold_change_cutoff</span></code> = param.Number(readonly=False)</dt><dd><p>Cutoff to use in grouping and coloring genes. Defaults to 2.0.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">p_value_cutoff</span></code> = param.Number(readonly=False)</dt><dd><p>Cutoff to use in grouping and coloring genes. Defaults to 1e-6.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">label_selected_genes</span></code> = param.Boolean(readonly=False)</dt><dd><p>Apply (if True) annotations of genes that pass both the log-fold-change and p-value cutoff values.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.log_fold_change_var">
+<span class="sig-name descname"><span class="pre">log_fold_change_var</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.log_fold_change_var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.p_value_var">
+<span class="sig-name descname"><span class="pre">p_value_var</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.p_value_var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.log_fold_change_cutoff">
+<span class="sig-name descname"><span class="pre">log_fold_change_cutoff</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2.0</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.log_fold_change_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.p_value_cutoff">
+<span class="sig-name descname"><span class="pre">p_value_cutoff</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1e-06</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.p_value_cutoff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.label_selected_genes">
+<span class="sig-name descname"><span class="pre">label_selected_genes</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.label_selected_genes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.bokeh_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bokeh_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.Volcano.bokeh_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.matplotlib_opts">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">matplotlib_opts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.plots.results.Volcano.matplotlib_opts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.volcano">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">volcano</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataset.Dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_fold_change_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_value_var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_fold_change_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_value_cutoff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_selected_genes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Gene'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">holoviews.core.overlay.NdOverlay</span></span></span><a class="headerlink" href="#GSForge.plots.results.Volcano.volcano" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.plots.results.Volcano.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Volcano'</span></em><a class="headerlink" href="#GSForge.plots.results.Volcano.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GSForge.plots.abstract_plot_models.html" class="btn btn-neutral float-right" title="GSForge.plots.abstract_plot_models module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GSForge.plots.gem.html" class="btn btn-neutral float-left" title="GSForge.plots.gem package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

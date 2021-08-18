@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GSForge.operations.analytics module &mdash; gsforge v0.6beta documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GSForge.operations.core module" href="GSForge.operations.core.html" />
+    <link rel="prev" title="GSForge.operations package" href="GSForge.operations.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gsforge
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Guide / Tutorial:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/tour.html"> Tour</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/gem_creation.html"> Annotated Expression Matrix Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/set_and_collection_creation.html"> Set and Collection Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Interface_Guide.html"> Interface Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/Plotting_Guide.html"> Plotting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/R_integration.html"> R Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_guide/analysis_resources.html"> Analysis Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/plot_gallery/ref_plots.html"> Reference Plots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference_examples/Normalizations/norm_index.html"> Normalization Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Walkthroughs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../walkthroughs/oryza_sativa/oryza_sativa_index.html"> Oryza sativa</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="GSForge.html">GSForge package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="GSForge.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="GSForge.models.html">GSForge.models package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="GSForge.operations.html">GSForge.operations package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.plots.html">GSForge.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GSForge.utils.html">GSForge.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GSForge.html#module-GSForge">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Development</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gsforge</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">GSForge</a> &raquo;</li>
+        
+          <li><a href="GSForge.html">GSForge package</a> &raquo;</li>
+        
+          <li><a href="GSForge.operations.html">GSForge.operations package</a> &raquo;</li>
+        
+      <li>GSForge.operations.analytics module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/API/GSForge.operations.analytics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-GSForge.operations.analytics">
+<span id="gsforge-operations-analytics-module"></span><h1>GSForge.operations.analytics module<a class="headerlink" href="#module-GSForge.operations.analytics" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Analytics</span></code> are intended to more closely rank or compare a GEM subset, rather than the entire GEM.
+These functions are intended for analyzing and comparing subsets generated by the functions found in <code class="docutils literal notranslate"><span class="pre">prospectors</span></code>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.RankGenesByModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.operations.analytics.</span></span><span class="sig-name descname"><span class="pre">RankGenesByModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.operations.analytics.RankGenesByModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.models.html#GSForge.models.CallableInterface" title="GSForge.models._Interface.CallableInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.CallableInterface</span></code></a></p>
+<p>Given some machine learning model, runs <cite>n_iterations</cite> and returns a summary of the ranking results.</p>
+<p>This operation uses the <code class="docutils literal notranslate"><span class="pre">Interface</span></code> base class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – A model that can be trained via <code class="docutils literal notranslate"><span class="pre">.fit(x,</span> <span class="pre">y)</span></code>.</p></li>
+<li><p><strong>n_iterations</strong> (<em>int</em>) – Number of gene ranking iterations to use an instance of <cite>model</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">model</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">n_iterations</span></code> = param.Integer(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.RankGenesByModel.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.operations.analytics.RankGenesByModel.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.RankGenesByModel.n_iterations">
+<span class="sig-name descname"><span class="pre">n_iterations</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#GSForge.operations.analytics.RankGenesByModel.n_iterations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.RankGenesByModel.rank_genes_by_model">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">rank_genes_by_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xarray.core.dataarray.DataArray</span></span></span><a class="headerlink" href="#GSForge.operations.analytics.RankGenesByModel.rank_genes_by_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.RankGenesByModel.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'RankGenesByModel'</span></em><a class="headerlink" href="#GSForge.operations.analytics.RankGenesByModel.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.nFDR">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.operations.analytics.</span></span><span class="sig-name descname"><span class="pre">nFDR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.operations.analytics.nFDR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.models.html#GSForge.models.CallableInterface" title="GSForge.models._Interface.CallableInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.CallableInterface</span></code></a></p>
+<p>nFDR (False Discovery Rate) <a class="reference internal" href="GSForge.operations.normalizations.html#method-compare" id="id1"><span>[method_compare]</span></a>.</p>
+<p>nFDR trains two models and compares their <code class="docutils literal notranslate"><span class="pre">feature_importances_</span></code> attributes to estimate
+the false discovery rate.</p>
+<p>The FDR estimated is the percent of instances a shuffled output feature has a higher feature
+importance score than the same non-shuffled feature score.</p>
+<p>This is repeated up to <code class="docutils literal notranslate"><span class="pre">n_iterations</span></code>.</p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">model</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">n_iterations</span></code> = param.Integer(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.nFDR.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.operations.analytics.nFDR.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.nFDR.n_iterations">
+<span class="sig-name descname"><span class="pre">n_iterations</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#GSForge.operations.analytics.nFDR.n_iterations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.nFDR.nFDR">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">nFDR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xarray.core.dataarray.DataArray</span></span></span><a class="headerlink" href="#GSForge.operations.analytics.nFDR.nFDR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.nFDR.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'nFDR'</span></em><a class="headerlink" href="#GSForge.operations.analytics.nFDR.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.mProbes">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">GSForge.operations.analytics.</span></span><span class="sig-name descname"><span class="pre">mProbes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GSForge.operations.analytics.mProbes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="GSForge.models.html#GSForge.models.CallableInterface" title="GSForge.models._Interface.CallableInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.CallableInterface</span></code></a></p>
+<p>mProbes <a class="reference internal" href="GSForge.operations.normalizations.html#method-compare" id="id2"><span>[method_compare]</span></a> works by randomly permuting the feature values in the supplied data.
+e.g. count values are shuffled within each samples feature (gene) array.</p>
+<p>It then ranks the real and shadowed features (for <code class="docutils literal notranslate"><span class="pre">n_iterations</span></code>) with the supplied <code class="docutils literal notranslate"><span class="pre">model</span></code>
+via a call to <code class="docutils literal notranslate"><span class="pre">model.fit()</span></code>. It then examines <code class="docutils literal notranslate"><span class="pre">model.feature_importances_</span></code> for the feature
+importance values, and then calculates the null rank distribution.</p>
+<p>This is repeated upto <code class="docutils literal notranslate"><span class="pre">n_iterations</span></code>.</p>
+<p>Parameters inherited from:</p>
+<blockquote>
+<div><p><a class="reference internal" href="GSForge.models.html#GSForge.models.Interface" title="GSForge.models._Interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">GSForge.models._Interface.Interface</span></code></a>: gem, gene_set_collection, selected_gene_sets, selected_genes, gene_set_mode, sample_subset, count_variable, annotation_variables, count_mask, annotation_mask, count_transform</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">model</span></code> = param.Parameter(readonly=False)</p>
+<p><code class="docutils literal notranslate"><span class="pre">n_iterations</span></code> = param.Integer(readonly=False)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.mProbes.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#GSForge.operations.analytics.mProbes.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.mProbes.n_iterations">
+<span class="sig-name descname"><span class="pre">n_iterations</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#GSForge.operations.analytics.mProbes.n_iterations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.mProbes.mProbes">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">mProbes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">xarray.core.dataarray.DataArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xarray.core.dataarray.DataArray</span></span></span><a class="headerlink" href="#GSForge.operations.analytics.mProbes.mProbes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GSForge.operations.analytics.mProbes.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'mProbes'</span></em><a class="headerlink" href="#GSForge.operations.analytics.mProbes.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GSForge.operations.core.html" class="btn btn-neutral float-right" title="GSForge.operations.core module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GSForge.operations.html" class="btn btn-neutral float-left" title="GSForge.operations package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Tyler Biggs, Stephen Ficklin.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

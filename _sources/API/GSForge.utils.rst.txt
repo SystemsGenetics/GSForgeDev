@@ -1,0 +1,21 @@
+GSForge.utils package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   GSForge.utils.R_interface
+   GSForge.utils.converters
+   GSForge.utils.enrichment
+   GSForge.utils.generate_gem
+
+Module contents
+---------------
+
+.. automodule:: GSForge.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+GSForge.utils.generate\_gem module
+==================================
+
+.. automodule:: GSForge.utils.generate_gem
+   :members:
+   :undoc-members:
+   :show-inheritance:
